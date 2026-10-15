@@ -1,0 +1,20 @@
+profile,group,role,overall_pct,overall_p10_pct,overall_p90_pct,squares_of_10000,ratio_vs_average_adult_median,deepest_field,deepest_field_pct
+Average adult,benchmark,Global benchmark,0.061,0.028,0.114,6,1.0,General & practical,0.34
+Indian engineering graduate,benchmark,"Typical B.Tech, ~5 years in IT",0.116,0.054,0.207,12,1.9,General & practical,0.43
+High-IQ adult,benchmark,"IQ ~145 (top 0.1%), not famous",0.218,0.099,0.393,22,3.6,General & practical,0.75
+Elon Musk,individual,"Entrepreneur, engineer",0.300,0.133,0.540,30,4.8,Business & work,2.35
+Bill Gates,individual,"Technologist, philanthropist",0.319,0.141,0.581,32,5.1,Business & work,2.35
+Terence Tao,individual,Mathematician,0.292,0.119,0.479,29,4.4,Mathematics & logic,6.00
+Demis Hassabis,individual,"AI researcher, Google DeepMind CEO",0.309,0.136,0.551,31,4.9,Computer science & AI,2.77
+Jennifer Doudna,individual,Biochemist,0.283,0.124,0.505,28,4.5,Chemistry,1.88
+Warren Buffett,individual,Investor,0.284,0.124,0.501,28,4.5,Business & work,3.53
+Noam Chomsky,individual,"Linguist, public intellectual",0.417,0.183,0.733,42,6.6,Philosophy & religion,2.19
+Amartya Sen,individual,"Economist, philosopher",0.398,0.174,0.700,40,6.3,Economics,5.10
+Sundar Pichai,individual,"Engineer, Alphabet CEO",0.250,0.113,0.446,25,4.1,Business & work,2.00
+Barack Obama,individual,"Lawyer, politician, author",0.295,0.131,0.534,30,4.7,Law & civics,1.33
+Neil deGrasse Tyson,individual,"Astrophysicist, science communicator",0.238,0.104,0.423,24,3.8,Physics & astronomy,2.29
+Ken Jennings,individual,"Quiz champion, author",0.301,0.124,0.497,30,4.5,General & practical,2.25
+A. R. Rahman,individual,Composer,0.306,0.127,0.503,31,4.6,Music,5.14
+Yuval Noah Harari,individual,Historian,0.276,0.123,0.494,28,4.4,History,1.50
+Devi Shetty,individual,"Cardiac surgeon, hospital founder",0.272,0.121,0.492,27,4.4,Medicine & health,1.58
+Amitav Ghosh,individual,"Novelist, essayist",0.345,0.154,0.617,34,5.5,Literature,1.63

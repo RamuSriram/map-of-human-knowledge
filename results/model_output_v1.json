@@ -1,0 +1,4130 @@
+{
+ "minPerKU": 12.5,
+ "ladder": [
+  {
+   "level": 0,
+   "ku": 200,
+   "label": "Minimal",
+   "desc": "Everyday exposure only",
+   "hours": 42
+  },
+  {
+   "level": 1,
+   "ku": 1500,
+   "label": "School",
+   "desc": "Secondary-school level, partly retained",
+   "hours": 312
+  },
+  {
+   "level": 2,
+   "ku": 5000,
+   "label": "Informed",
+   "desc": "Sustained reading or adjacent work exposure",
+   "hours": 1042
+  },
+  {
+   "level": 3,
+   "ku": 12000,
+   "label": "Degree",
+   "desc": "Undergraduate-level command",
+   "hours": 2500
+  },
+  {
+   "level": 4,
+   "ku": 30000,
+   "label": "Professional",
+   "desc": "Graduate training or years of professional practice",
+   "hours": 6250
+  },
+  {
+   "level": 5,
+   "ku": 80000,
+   "label": "Expert",
+   "desc": "10+ years of research or professional leadership",
+   "hours": 16667
+  },
+  {
+   "level": 6,
+   "ku": 180000,
+   "label": "World-class",
+   "desc": "Top of the field and spanning many of its subfields",
+   "hours": 37500
+  }
+ ],
+ "families": {
+  "sci": "Formal & physical sciences",
+  "life": "Life & health",
+  "tech": "Technology",
+  "soc": "Society & mind",
+  "hum": "Humanities & arts",
+  "lang": "Language & everyday"
+ },
+ "categories": [
+  {
+   "id": "math",
+   "name": "Mathematics & logic",
+   "short": "Math",
+   "family": "sci",
+   "N": 3.0,
+   "low": 1.5,
+   "high": 8,
+   "includes": "Arithmetic to research mathematics, statistics, logic",
+   "anchor": "MSC2020 has 63 areas, 529 sub-areas and 6,022 leaf topics",
+   "share": 0.02553191489361702
+  },
+  {
+   "id": "phys",
+   "name": "Physics & astronomy",
+   "short": "Physics",
+   "family": "sci",
+   "N": 3.5,
+   "low": 1.5,
+   "high": 9,
+   "includes": "Mechanics to cosmology, astronomy, space science",
+   "anchor": "Particle to cosmic scales; judged similar in core size to mathematics",
+   "share": 0.029787234042553193
+  },
+  {
+   "id": "chem",
+   "name": "Chemistry",
+   "short": "Chemistry",
+   "family": "sci",
+   "N": 3.5,
+   "low": 1.5,
+   "high": 10,
+   "includes": "General, organic, inorganic, physical, materials, biochemistry",
+   "anchor": "CAS Registry lists 290M+ substances (the long tail); the core is far smaller",
+   "share": 0.029787234042553193
+  },
+  {
+   "id": "earth",
+   "name": "Earth & environment",
+   "short": "Earth & env",
+   "family": "sci",
+   "N": 2.5,
+   "low": 1.0,
+   "high": 6,
+   "includes": "Geology, oceans, weather, climate, energy, sustainability",
+   "anchor": "Smaller research base than physics or biology",
+   "share": 0.02127659574468085
+  },
+  {
+   "id": "bio",
+   "name": "Biology & nature",
+   "short": "Biology",
+   "family": "life",
+   "N": 7.0,
+   "low": 3.5,
+   "high": 18,
+   "includes": "Cells to ecosystems, genetics, evolution, plants, animals, agriculture",
+   "anchor": "About 2.1M described species (Catalogue of Life); molecular to ecosystem scales",
+   "share": 0.059574468085106386
+  },
+  {
+   "id": "med",
+   "name": "Medicine & health",
+   "short": "Medicine",
+   "family": "life",
+   "N": 7.0,
+   "low": 3.5,
+   "high": 18,
+   "includes": "Anatomy, disease, clinical practice, pharmacology, nutrition, public health",
+   "anchor": "ICD-11: ~17,000 codes, 120,000+ codable terms; SNOMED CT: 350,000+ concepts",
+   "share": 0.059574468085106386
+  },
+  {
+   "id": "cs",
+   "name": "Computer science & AI",
+   "short": "CS & AI",
+   "family": "tech",
+   "N": 4.0,
+   "low": 2.0,
+   "high": 10,
+   "includes": "Algorithms, software, systems, networks, security, AI",
+   "anchor": "ACM CCS four-level taxonomy, plus fast-changing technology stacks",
+   "share": 0.03404255319148936
+  },
+  {
+   "id": "eng",
+   "name": "Engineering & technology",
+   "short": "Engineering",
+   "family": "tech",
+   "N": 8.0,
+   "low": 4.0,
+   "high": 20,
+   "includes": "Mechanical, electrical, civil, aerospace, materials, manufacturing, transport",
+   "anchor": "OpenAlex's largest field (63.3M works, June 2026); dozens of disciplines",
+   "share": 0.06808510638297872
+  },
+  {
+   "id": "econ",
+   "name": "Economics",
+   "short": "Economics",
+   "family": "soc",
+   "N": 3.0,
+   "low": 1.5,
+   "high": 8,
+   "includes": "Micro, macro, money, trade, development, economic history",
+   "anchor": "JEL classification, plus the economies of 190+ countries",
+   "share": 0.02553191489361702
+  },
+  {
+   "id": "bus",
+   "name": "Business & work",
+   "short": "Business",
+   "family": "soc",
+   "N": 4.0,
+   "low": 2.0,
+   "high": 10,
+   "includes": "Management, finance, accounting, marketing, careers, industries",
+   "anchor": "General practice plus knowledge of thousands of industries and firms",
+   "share": 0.03404255319148936
+  },
+  {
+   "id": "law",
+   "name": "Law & civics",
+   "short": "Law",
+   "family": "soc",
+   "N": 6.0,
+   "low": 3.0,
+   "high": 15,
+   "includes": "Constitutions, contracts, courts, rights, international law",
+   "anchor": "190+ national legal systems, each with its own statutes and case law",
+   "share": 0.05106382978723404
+  },
+  {
+   "id": "psych",
+   "name": "Psychology",
+   "short": "Psychology",
+   "family": "soc",
+   "N": 2.5,
+   "low": 1.2,
+   "high": 6,
+   "includes": "Memory, emotion, personality, development, cognition, clinical",
+   "anchor": "Core theory is compact; the empirical literature is large",
+   "share": 0.02127659574468085
+  },
+  {
+   "id": "soc",
+   "name": "Social sciences",
+   "short": "Social sci",
+   "family": "soc",
+   "N": 6.0,
+   "low": 3.0,
+   "high": 15,
+   "includes": "Sociology, politics, anthropology, demography, media, education",
+   "anchor": "OpenAlex's second-largest field by volume",
+   "share": 0.05106382978723404
+  },
+  {
+   "id": "hist",
+   "name": "History",
+   "short": "History",
+   "family": "hum",
+   "N": 8.0,
+   "low": 4.0,
+   "high": 20,
+   "includes": "All regions and eras, military history, archaeology, exploration",
+   "anchor": "Every region and period of the human past",
+   "share": 0.06808510638297872
+  },
+  {
+   "id": "phil",
+   "name": "Philosophy & religion",
+   "short": "Philosophy",
+   "family": "hum",
+   "N": 3.0,
+   "low": 1.5,
+   "high": 8,
+   "includes": "Ethics, logic, mind, political philosophy, religions, mythology",
+   "anchor": "Academic philosophy plus thousands of religious traditions and texts",
+   "share": 0.02553191489361702
+  },
+  {
+   "id": "arts",
+   "name": "Visual arts, film & design",
+   "short": "Arts & film",
+   "family": "hum",
+   "N": 5.0,
+   "low": 2.0,
+   "high": 12,
+   "includes": "Painting, architecture, design, fashion, crafts, cinema, theatre",
+   "anchor": "Millions of catalogued works across every culture and medium",
+   "share": 0.0425531914893617
+  },
+  {
+   "id": "music",
+   "name": "Music",
+   "short": "Music",
+   "family": "hum",
+   "N": 3.5,
+   "low": 1.5,
+   "high": 9,
+   "includes": "Theory, instruments, Carnatic, Hindustani, Western, folk, film, pop",
+   "anchor": "Hundreds of traditions, each with its own theory and repertoire",
+   "share": 0.029787234042553193
+  },
+  {
+   "id": "lit",
+   "name": "Literature",
+   "short": "Literature",
+   "family": "hum",
+   "N": 8.0,
+   "low": 4.0,
+   "high": 20,
+   "includes": "Epics, poetry, novels, drama, oral traditions, criticism",
+   "anchor": "About 130M distinct book titles (Google Books count, 2010)",
+   "share": 0.06808510638297872
+  },
+  {
+   "id": "lang",
+   "name": "Languages & linguistics",
+   "short": "Languages",
+   "family": "lang",
+   "N": 22.0,
+   "low": 8.0,
+   "high": 60,
+   "includes": "Individual languages, writing systems, grammar, linguistics",
+   "anchor": "7,170 living languages (Ethnologue, 2026); 600-2,200 class hours each for working proficiency (FSI)",
+   "share": 0.18723404255319148
+  },
+  {
+   "id": "gen",
+   "name": "General & practical",
+   "short": "General",
+   "family": "lang",
+   "N": 8.0,
+   "low": 3.0,
+   "high": 20,
+   "includes": "Everyday know-how, food, sports & games, travel, current affairs, pop culture",
+   "anchor": "About 7M English Wikipedia articles, 66M+ across all languages",
+   "share": 0.06808510638297872
+  }
+ ],
+ "mapTotal": 117500000.0,
+ "mapUnion": 94205000.0,
+ "mapYears": 9813.020833333334,
+ "ceilings": {
+  "life": 0.023805105886099465,
+  "real": 0.0050952709516480016,
+  "lifeHours": 467200,
+  "realHours": 100000,
+  "lifeKU": 2242560.0,
+  "realKU": 480000.0
+ },
+ "perLangKU": 12000,
+ "people": [
+  {
+   "top3": [
+    "gen",
+    "bus",
+    "music"
+   ],
+   "eqLo": 0.030416397306531364,
+   "eqHi": 0.12782747811553144,
+   "id": "avg",
+   "name": "Average adult",
+   "group": "benchmark",
+   "role": "Global benchmark",
+   "basis": "About 9 years of schooling (world mean 8.8, UNDP 2025), a service-sector job, one native language plus a little of a second.",
+   "langs": [
+    {
+     "name": "Native language (modest schooling)",
+     "prof": 0.7
+    },
+    {
+     "name": "Second language (basic)",
+     "prof": 0.2
+    }
+   ],
+   "ling": 0.0,
+   "cells": [
+    {
+     "cat": "math",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.05,
+     "lo": 0.01380914843606243,
+     "hi": 0.14052939322086472
+    },
+    {
+     "cat": "phys",
+     "level": 0.7,
+     "ku": 819.5451415517421,
+     "cov": 0.023415575472906916,
+     "lo": 0.006473469618036324,
+     "hi": 0.07899053032193325
+    },
+    {
+     "cat": "chem",
+     "level": 0.6,
+     "ku": 669.987582662286,
+     "cov": 0.019142502361779598,
+     "lo": 0.005461049483264568,
+     "hi": 0.0695691718953052
+    },
+    {
+     "cat": "earth",
+     "level": 0.9,
+     "ku": 1226.26725855586,
+     "cov": 0.0490506903422344,
+     "lo": 0.013612480661822326,
+     "hi": 0.14980070360637507
+    },
+    {
+     "cat": "bio",
+     "level": 0.9,
+     "ku": 1226.26725855586,
+     "cov": 0.017518103693655144,
+     "lo": 0.0050112547950738415,
+     "hi": 0.05197998763944188
+    },
+    {
+     "cat": "med",
+     "level": 1.1,
+     "ku": 1691.91730950825,
+     "cov": 0.024170247278689282,
+     "lo": 0.007120063000818573,
+     "hi": 0.06885163774676412
+    },
+    {
+     "cat": "cs",
+     "level": 0.8,
+     "ku": 1002.4875929374037,
+     "cov": 0.02506218982343509,
+     "lo": 0.00705055794988974,
+     "hi": 0.0782332706074778
+    },
+    {
+     "cat": "eng",
+     "level": 0.7,
+     "ku": 819.5451415517421,
+     "cov": 0.010244314269396777,
+     "lo": 0.0029784760507330773,
+     "hi": 0.0346018962245872
+    },
+    {
+     "cat": "econ",
+     "level": 0.8,
+     "ku": 1002.4875929374037,
+     "cov": 0.033416253097913455,
+     "lo": 0.009343367468097172,
+     "hi": 0.1053987786237136
+    },
+    {
+     "cat": "bus",
+     "level": 1.6,
+     "ku": 3089.004252837061,
+     "cov": 0.07722510632092652,
+     "lo": 0.02680449206816606,
+     "hi": 0.2140990775416243
+    },
+    {
+     "cat": "law",
+     "level": 0.9,
+     "ku": 1226.26725855586,
+     "cov": 0.02043778764259767,
+     "lo": 0.005686170543005552,
+     "hi": 0.06212356670547239
+    },
+    {
+     "cat": "psych",
+     "level": 0.9,
+     "ku": 1226.26725855586,
+     "cov": 0.0490506903422344,
+     "lo": 0.01399845222203683,
+     "hi": 0.14824902581699778
+    },
+    {
+     "cat": "soc",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.025,
+     "lo": 0.007079823934999714,
+     "hi": 0.07340836543379346
+    },
+    {
+     "cat": "hist",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.01875,
+     "lo": 0.005324319569463601,
+     "hi": 0.052363731527852994
+    },
+    {
+     "cat": "phil",
+     "level": 1.2,
+     "ku": 1908.3894548090884,
+     "cov": 0.06361298182696962,
+     "lo": 0.019308694934855618,
+     "hi": 0.18321264788298602
+    },
+    {
+     "cat": "arts",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.043051162024993456,
+     "lo": 0.01346347606084329,
+     "hi": 0.12851144553699068
+    },
+    {
+     "cat": "music",
+     "level": 1.4,
+     "ku": 2427.96687415102,
+     "cov": 0.06937048211860057,
+     "lo": 0.02230019087295522,
+     "hi": 0.20700630592497865
+    },
+    {
+     "cat": "lit",
+     "level": 0.8,
+     "ku": 1002.4875929374037,
+     "cov": 0.012531094911717545,
+     "lo": 0.003540151650345619,
+     "hi": 0.04115198406420679
+    },
+    {
+     "cat": "lang",
+     "level": 0.0,
+     "ku": 10999.999999999998,
+     "cov": 0.04999999999999999,
+     "lo": 0.017654050410979946,
+     "hi": 0.14219331645531982
+    },
+    {
+     "cat": "gen",
+     "level": 3.9,
+     "ku": 27373.30609666441,
+     "cov": 0.34216632620830517,
+     "lo": 0.1162752178482878,
+     "hi": 1.0176290902910812
+    }
+   ],
+   "overall": 0.060899296593157216,
+   "overallLo": 0.028249220555812665,
+   "overallHi": 0.11356665881644658,
+   "eq": 0.05116077538681778,
+   "unionKU": 57370.182355583755,
+   "hours": 11952.12132407995,
+   "peakCat": "gen",
+   "peakCov": 0.34216632620830517,
+   "ratioVsAvg": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "top3": [
+    "gen",
+    "cs",
+    "math"
+   ],
+   "eqLo": 0.06779209179022946,
+   "eqHi": 0.2701550565671601,
+   "id": "grad",
+   "name": "Indian engineering graduate",
+   "group": "benchmark",
+   "role": "Typical B.Tech, ~5 years in IT",
+   "basis": "Four-year B.Tech (computer science or allied branch), about five years in an IT job, typical reading and media habits.",
+   "langs": [
+    {
+     "name": "Native language, e.g. Telugu",
+     "prof": 1.0
+    },
+    {
+     "name": "English (professional)",
+     "prof": 0.6
+    },
+    {
+     "name": "Hindi (conversational)",
+     "prof": 0.3
+    }
+   ],
+   "ling": 0.7,
+   "cells": [
+    {
+     "cat": "math",
+     "level": 2.5,
+     "ku": 7745.966692414834,
+     "cov": 0.2581988897471611,
+     "lo": 0.09420802827209242,
+     "hi": 0.7020221294069621
+    },
+    {
+     "cat": "phys",
+     "level": 1.9,
+     "ku": 4432.840752826071,
+     "cov": 0.12665259293788775,
+     "lo": 0.04102412945212215,
+     "hi": 0.35277782341374975
+    },
+    {
+     "cat": "chem",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.07824607964359523,
+     "lo": 0.025688241149028738,
+     "hi": 0.23943645509353043
+    },
+    {
+     "cat": "earth",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.08610232404998691,
+     "lo": 0.027488360242234527,
+     "hi": 0.25802670047741844
+    },
+    {
+     "cat": "bio",
+     "level": 1.1,
+     "ku": 1691.91730950825,
+     "cov": 0.024170247278689282,
+     "lo": 0.007346005923519918,
+     "hi": 0.06848939632285153
+    },
+    {
+     "cat": "med",
+     "level": 1.2,
+     "ku": 1908.3894548090884,
+     "cov": 0.02726270649727269,
+     "lo": 0.008465058195434033,
+     "hi": 0.07760756599324488
+    },
+    {
+     "cat": "cs",
+     "level": 3.3,
+     "ku": 15796.58645201085,
+     "cov": 0.39491466130027125,
+     "lo": 0.14776645044210954,
+     "hi": 1.0708630039112736
+    },
+    {
+     "cat": "eng",
+     "level": 2.4,
+     "ku": 7096.668207625555,
+     "cov": 0.08870835259531942,
+     "lo": 0.03240746463337277,
+     "hi": 0.24308384357377452
+    },
+    {
+     "cat": "econ",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.07175193670832243,
+     "lo": 0.023871188289153883,
+     "hi": 0.212635922638095
+    },
+    {
+     "cat": "bus",
+     "level": 2.0,
+     "ku": 5000.000000000004,
+     "cov": 0.12500000000000008,
+     "lo": 0.04328742344219491,
+     "hi": 0.32807489442644866
+    },
+    {
+     "cat": "law",
+     "level": 1.2,
+     "ku": 1908.3894548090884,
+     "cov": 0.03180649091348481,
+     "lo": 0.01013620526467897,
+     "hi": 0.09436212830423167
+    },
+    {
+     "cat": "psych",
+     "level": 1.2,
+     "ku": 1908.3894548090884,
+     "cov": 0.07633557819236354,
+     "lo": 0.023619615689438486,
+     "hi": 0.21919085498092977
+    },
+    {
+     "cat": "soc",
+     "level": 1.4,
+     "ku": 2427.96687415102,
+     "cov": 0.04046611456918366,
+     "lo": 0.01367548042376654,
+     "hi": 0.11823002419819545
+    },
+    {
+     "cat": "hist",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.03423265984407291,
+     "lo": 0.011944254036016731,
+     "hi": 0.09745947764294008
+    },
+    {
+     "cat": "phil",
+     "level": 1.4,
+     "ku": 2427.96687415102,
+     "cov": 0.08093222913836733,
+     "lo": 0.0261981078238398,
+     "hi": 0.23870320668741815
+    },
+    {
+     "cat": "arts",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.05477225575051667,
+     "lo": 0.01796375079642693,
+     "hi": 0.16413074565975727
+    },
+    {
+     "cat": "music",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.07824607964359523,
+     "lo": 0.026273638663471873,
+     "hi": 0.24091626970657434
+    },
+    {
+     "cat": "lit",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.02690697626562091,
+     "lo": 0.008956501086664752,
+     "hi": 0.07812488917662404
+    },
+    {
+     "cat": "lang",
+     "level": 0.7,
+     "ku": 23619.545141551742,
+     "cov": 0.10736156882523518,
+     "lo": 0.03863963448894261,
+     "hi": 0.3059911650358703
+    },
+    {
+     "cat": "gen",
+     "level": 4.15,
+     "ku": 34754.94171805011,
+     "cov": 0.43443677147562637,
+     "lo": 0.15184476824121684,
+     "hi": 1.2878074251323688
+    }
+   ],
+   "overall": 0.11554238226856675,
+   "overallLo": 0.053984999182633775,
+   "overallHi": 0.2070997867801595,
+   "eq": 0.11232522576882863,
+   "unionKU": 108846.7012161033,
+   "hours": 22676.39608668819,
+   "peakCat": "gen",
+   "peakCov": 0.43443677147562637,
+   "ratioVsAvg": [
+    1.4294864347360026,
+    1.8997343466451369,
+    2.4764480429713305
+   ]
+  },
+  {
+   "top3": [
+    "gen",
+    "math",
+    "phys"
+   ],
+   "eqLo": 0.14307770709390424,
+   "eqHi": 0.5670139889494777,
+   "id": "iq",
+   "name": "High-IQ adult",
+   "group": "benchmark",
+   "role": "IQ ~145 (top 0.1%), not famous",
+   "basis": "Master's in electrical engineering (illustrative), reads about 40 books a year across subjects. Assumed to learn roughly 1.5 to 2 times more per hour than average, but with the same hours in a day.",
+   "langs": [
+    {
+     "name": "Native language",
+     "prof": 1.0
+    },
+    {
+     "name": "Second language (fluent)",
+     "prof": 0.8
+    },
+    {
+     "name": "Third language (partial)",
+     "prof": 0.3
+    }
+   ],
+   "ling": 1.5,
+   "cells": [
+    {
+     "cat": "math",
+     "level": 3.4,
+     "ku": 17312.398870886547,
+     "cov": 0.577079962362885,
+     "lo": 0.21225843365417713,
+     "hi": 1.5754653457678176
+    },
+    {
+     "cat": "phys",
+     "level": 3.2,
+     "ku": 14413.493207777163,
+     "cov": 0.41181409165077604,
+     "lo": 0.14684450757241874,
+     "hi": 1.1665238675439944
+    },
+    {
+     "cat": "chem",
+     "level": 2.2,
+     "ku": 5956.7894908354565,
+     "cov": 0.1701939854524416,
+     "lo": 0.05830503138117712,
+     "hi": 0.4952974409110044
+    },
+    {
+     "cat": "earth",
+     "level": 2.1,
+     "ku": 5457.467128089486,
+     "cov": 0.21829868512357944,
+     "lo": 0.07470661768331766,
+     "hi": 0.6085804131545335
+    },
+    {
+     "cat": "bio",
+     "level": 2.3,
+     "ku": 6501.7965670366775,
+     "cov": 0.09288280810052396,
+     "lo": 0.03470956603191839,
+     "hi": 0.24609835311807413
+    },
+    {
+     "cat": "med",
+     "level": 1.9,
+     "ku": 4432.840752826071,
+     "cov": 0.06332629646894387,
+     "lo": 0.02145960848410515,
+     "hi": 0.1727900015923736
+    },
+    {
+     "cat": "cs",
+     "level": 3.3,
+     "ku": 15796.58645201085,
+     "cov": 0.39491466130027125,
+     "lo": 0.150223340855452,
+     "hi": 1.06858516441028
+    },
+    {
+     "cat": "eng",
+     "level": 4.0,
+     "ku": 30000.000000000007,
+     "cov": 0.37500000000000006,
+     "lo": 0.13770338535373333,
+     "hi": 1.0480570299409477
+    },
+    {
+     "cat": "econ",
+     "level": 2.4,
+     "ku": 7096.668207625555,
+     "cov": 0.2365556069208518,
+     "lo": 0.086791047073789,
+     "hi": 0.6533582646756902
+    },
+    {
+     "cat": "bus",
+     "level": 2.3,
+     "ku": 6501.7965670366775,
+     "cov": 0.16254491417591693,
+     "lo": 0.058661901019057335,
+     "hi": 0.43226181412606096
+    },
+    {
+     "cat": "law",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.06550025713305188,
+     "lo": 0.02252139457464941,
+     "hi": 0.18657901555553608
+    },
+    {
+     "cat": "psych",
+     "level": 2.4,
+     "ku": 7096.668207625555,
+     "cov": 0.2838667283050222,
+     "lo": 0.10583160687320729,
+     "hi": 0.7707371413919216
+    },
+    {
+     "cat": "soc",
+     "level": 2.3,
+     "ku": 6501.7965670366775,
+     "cov": 0.10836327611727795,
+     "lo": 0.03982599158980833,
+     "hi": 0.2928531438750331
+    },
+    {
+     "cat": "hist",
+     "level": 2.7,
+     "ku": 9228.218597947644,
+     "cov": 0.11535273247434555,
+     "lo": 0.043683213174003796,
+     "hi": 0.30655376445288846
+    },
+    {
+     "cat": "phil",
+     "level": 2.7,
+     "ku": 9228.218597947644,
+     "cov": 0.30760728659825476,
+     "lo": 0.11308670877833522,
+     "hi": 0.8604788846984356
+    },
+    {
+     "cat": "arts",
+     "level": 2.0,
+     "ku": 5000.000000000004,
+     "cov": 0.10000000000000006,
+     "lo": 0.03319423009790557,
+     "hi": 0.2747952338050718
+    },
+    {
+     "cat": "music",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.11228615508523179,
+     "lo": 0.03857203132138953,
+     "hi": 0.33007163898651837
+    },
+    {
+     "cat": "lit",
+     "level": 2.5,
+     "ku": 7745.966692414834,
+     "cov": 0.09682458365518543,
+     "lo": 0.0363377643431779,
+     "hi": 0.25975170424677024
+    },
+    {
+     "cat": "lang",
+     "level": 1.5,
+     "ku": 27938.61278752583,
+     "cov": 0.12699369448875378,
+     "lo": 0.046393730596842146,
+     "hi": 0.35242579457728446
+    },
+    {
+     "cat": "gen",
+     "level": 4.7,
+     "ku": 59607.28861369785,
+     "cov": 0.7450911076712231,
+     "lo": 0.25430026300310205,
+     "hi": 2.232150141652429
+    }
+   ],
+   "overall": 0.217724077781,
+   "overallLo": 0.09896699556284358,
+   "overallHi": 0.3926845301662772,
+   "eq": 0.2382248416542268,
+   "unionKU": 205106.96747359104,
+   "hours": 42730.6182236648,
+   "peakCat": "gen",
+   "peakCov": 0.7450911076712231,
+   "ratioVsAvg": [
+    2.696948963126025,
+    3.5588601042305905,
+    4.6284383301561025
+   ]
+  },
+  {
+   "top3": [
+    "bus",
+    "eng",
+    "gen"
+   ],
+   "eqLo": 0.1927424322632449,
+   "eqHi": 0.797956204691758,
+   "id": "musk",
+   "name": "Elon Musk",
+   "group": "individual",
+   "role": "Entrepreneur, engineer",
+   "basis": "BA physics and BS economics, University of Pennsylvania (1997); by his account left a Stanford PhD programme within days (1995); has run SpaceX engineering as CEO and CTO since 2002; Tesla CEO since 2008; co-founded Zip2, X.com/PayPal, Neuralink, The Boring Company and xAI.",
+   "langs": [
+    {
+     "name": "English",
+     "prof": 1.0
+    },
+    {
+     "name": "Afrikaans (school level, assumed)",
+     "prof": 0.15
+    }
+   ],
+   "ling": 1.0,
+   "cells": [
+    {
+     "cat": "math",
+     "level": 3.0,
+     "ku": 11999.999999999993,
+     "cov": 0.39999999999999974,
+     "lo": 0.14750936302585935,
+     "hi": 1.126582442426617
+    },
+    {
+     "cat": "phys",
+     "level": 3.5,
+     "ku": 18973.665961010272,
+     "cov": 0.5421047417431506,
+     "lo": 0.19542228748985116,
+     "hi": 1.515547648854344
+    },
+    {
+     "cat": "chem",
+     "level": 2.6,
+     "ku": 8454.671719825994,
+     "cov": 0.24156204913788554,
+     "lo": 0.08705281440623214,
+     "hi": 0.6904364434400448
+    },
+    {
+     "cat": "earth",
+     "level": 2.0,
+     "ku": 5000.000000000004,
+     "cov": 0.20000000000000012,
+     "lo": 0.06574437844161653,
+     "hi": 0.5456331757046103
+    },
+    {
+     "cat": "bio",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.056143077542615896,
+     "lo": 0.020299227201112477,
+     "hi": 0.15049210119413986
+    },
+    {
+     "cat": "med",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.039123039821797614,
+     "lo": 0.013169573380096932,
+     "hi": 0.11267432470717094
+    },
+    {
+     "cat": "cs",
+     "level": 3.4,
+     "ku": 17312.398870886547,
+     "cov": 0.4328099717721637,
+     "lo": 0.16080168089490637,
+     "hi": 1.172472177163233
+    },
+    {
+     "cat": "eng",
+     "level": 4.8,
+     "ku": 65750.07318068903,
+     "cov": 0.8218759147586128,
+     "lo": 0.30177577977131415,
+     "hi": 2.199969457883516
+    },
+    {
+     "cat": "econ",
+     "level": 3.0,
+     "ku": 11999.999999999993,
+     "cov": 0.39999999999999974,
+     "lo": 0.14826180072726045,
+     "hi": 1.1142374585277341
+    },
+    {
+     "cat": "bus",
+     "level": 5.2,
+     "ku": 94086.32180197377,
+     "cov": 2.352158045049344,
+     "lo": 0.8810898666837871,
+     "hi": 6.07702632359575
+    },
+    {
+     "cat": "law",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.06550025713305188,
+     "lo": 0.022283867132467484,
+     "hi": 0.18310549579415336
+    },
+    {
+     "cat": "psych",
+     "level": 1.6,
+     "ku": 3089.004252837061,
+     "cov": 0.12356017011348243,
+     "lo": 0.0423634236107595,
+     "hi": 0.3579939092818598
+    },
+    {
+     "cat": "soc",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.06550025713305188,
+     "lo": 0.022734723008633537,
+     "hi": 0.18553665602454472
+    },
+    {
+     "cat": "hist",
+     "level": 2.3,
+     "ku": 6501.7965670366775,
+     "cov": 0.08127245708795847,
+     "lo": 0.030079926173348703,
+     "hi": 0.22207108636397027
+    },
+    {
+     "cat": "phil",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.13100051426610376,
+     "lo": 0.043148067833412976,
+     "hi": 0.3715562156749991
+    },
+    {
+     "cat": "arts",
+     "level": 1.4,
+     "ku": 2427.96687415102,
+     "cov": 0.048559337483020396,
+     "lo": 0.015227880716917944,
+     "hi": 0.14691313212513227
+    },
+    {
+     "cat": "music",
+     "level": 1.2,
+     "ku": 1908.3894548090884,
+     "cov": 0.05452541299454538,
+     "lo": 0.016907204174971067,
+     "hi": 0.16005818620753295
+    },
+    {
+     "cat": "lit",
+     "level": 2.1,
+     "ku": 5457.467128089486,
+     "cov": 0.06821833910111859,
+     "lo": 0.024036957644213205,
+     "hi": 0.1786057218998076
+    },
+    {
+     "cat": "lang",
+     "level": 1.0,
+     "ku": 15299.999999999998,
+     "cov": 0.06954545454545454,
+     "lo": 0.025267070599448323,
+     "hi": 0.19358197322754236
+    },
+    {
+     "cat": "gen",
+     "level": 4.4,
+     "ku": 44412.86069845845,
+     "cov": 0.5551607587307306,
+     "lo": 0.18720192044266787,
+     "hi": 1.6278263084847266
+    }
+   ],
+   "overall": 0.3000703204620182,
+   "overallLo": 0.13255090862027433,
+   "overallHi": 0.5398301984748126,
+   "eq": 0.33743098992070436,
+   "unionKU": 282681.24539124424,
+   "hours": 58891.92612317589,
+   "peakCat": "bus",
+   "peakCov": 2.352158045049344,
+   "ratioVsAvg": [
+    3.570910005823223,
+    4.803385118997171,
+    6.336072116479327
+   ]
+  },
+  {
+   "top3": [
+    "bus",
+    "cs",
+    "gen"
+   ],
+   "eqLo": 0.2166170044107566,
+   "eqHi": 0.8939181373494581,
+   "id": "gates",
+   "name": "Bill Gates",
+   "group": "individual",
+   "role": "Technologist, philanthropist",
+   "basis": "Left Harvard (1975) to co-found Microsoft, wrote much of its early software and was CEO until 2000; has led the Gates Foundation's work on global health, vaccines and development since 2000; founded TerraPower and Breakthrough Energy; books on climate (2021) and pandemic preparedness (2022).",
+   "langs": [
+    {
+     "name": "English",
+     "prof": 1.0
+    }
+   ],
+   "ling": 1.0,
+   "cells": [
+    {
+     "cat": "math",
+     "level": 3.2,
+     "ku": 14413.493207777163,
+     "cov": 0.4804497735925721,
+     "lo": 0.17361115259793444,
+     "hi": 1.320558789997013
+    },
+    {
+     "cat": "phys",
+     "level": 2.4,
+     "ku": 7096.668207625555,
+     "cov": 0.20276194878930154,
+     "lo": 0.07080872532178108,
+     "hi": 0.5661983047950254
+    },
+    {
+     "cat": "chem",
+     "level": 2.0,
+     "ku": 5000.000000000004,
+     "cov": 0.14285714285714296,
+     "lo": 0.047348522231999556,
+     "hi": 0.41837367348150584
+    },
+    {
+     "cat": "earth",
+     "level": 2.8,
+     "ku": 10072.539929824636,
+     "cov": 0.40290159719298546,
+     "lo": 0.14467435642997442,
+     "hi": 1.1290538463363549
+    },
+    {
+     "cat": "bio",
+     "level": 3.0,
+     "ku": 11999.999999999993,
+     "cov": 0.17142857142857132,
+     "lo": 0.06678219870790048,
+     "hi": 0.4582414397074812
+    },
+    {
+     "cat": "med",
+     "level": 3.3,
+     "ku": 15796.58645201085,
+     "cov": 0.22566552074301216,
+     "lo": 0.08311198887431925,
+     "hi": 0.611555664056836
+    },
+    {
+     "cat": "cs",
+     "level": 4.6,
+     "ku": 54038.40154082447,
+     "cov": 1.3509600385206118,
+     "lo": 0.49064131066240274,
+     "hi": 3.6924635097830323
+    },
+    {
+     "cat": "eng",
+     "level": 2.8,
+     "ku": 10072.539929824636,
+     "cov": 0.12590674912280794,
+     "lo": 0.04737379935541502,
+     "hi": 0.3367489838575857
+    },
+    {
+     "cat": "econ",
+     "level": 3.0,
+     "ku": 11999.999999999993,
+     "cov": 0.39999999999999974,
+     "lo": 0.14981854577784545,
+     "hi": 1.1075848252078353
+    },
+    {
+     "cat": "bus",
+     "level": 5.2,
+     "ku": 94086.32180197377,
+     "cov": 2.352158045049344,
+     "lo": 0.8849479063484154,
+     "hi": 6.096889353398191
+    },
+    {
+     "cat": "law",
+     "level": 2.2,
+     "ku": 5956.7894908354565,
+     "cov": 0.09927982484725761,
+     "lo": 0.034998051306971624,
+     "hi": 0.2689070937552715
+    },
+    {
+     "cat": "psych",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.1572006171193245,
+     "lo": 0.0547422162622862,
+     "hi": 0.4402210948969582
+    },
+    {
+     "cat": "soc",
+     "level": 2.8,
+     "ku": 10072.539929824636,
+     "cov": 0.16787566549707728,
+     "lo": 0.06281386461839963,
+     "hi": 0.46518326083335076
+    },
+    {
+     "cat": "hist",
+     "level": 2.7,
+     "ku": 9228.218597947644,
+     "cov": 0.11535273247434555,
+     "lo": 0.04420262649897265,
+     "hi": 0.3112564450893865
+    },
+    {
+     "cat": "phil",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.13100051426610376,
+     "lo": 0.04378047222416172,
+     "hi": 0.3687012728159747
+    },
+    {
+     "cat": "arts",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.05477225575051667,
+     "lo": 0.017915457742453463,
+     "hi": 0.16040550685910787
+    },
+    {
+     "cat": "music",
+     "level": 1.2,
+     "ku": 1908.3894548090884,
+     "cov": 0.05452541299454538,
+     "lo": 0.01648786518073991,
+     "hi": 0.1663736648335087
+    },
+    {
+     "cat": "lit",
+     "level": 2.2,
+     "ku": 5956.7894908354565,
+     "cov": 0.0744598686354432,
+     "lo": 0.027459834010751402,
+     "hi": 0.19709397034861587
+    },
+    {
+     "cat": "lang",
+     "level": 1.0,
+     "ku": 13500.0,
+     "cov": 0.06136363636363636,
+     "lo": 0.02260523625570027,
+     "hi": 0.17314883733352887
+    },
+    {
+     "cat": "gen",
+     "level": 4.7,
+     "ku": 59607.28861369785,
+     "cov": 0.7450911076712231,
+     "lo": 0.2545175959549963,
+     "hi": 2.1952578318844216
+    }
+   ],
+   "overall": 0.3189007176988382,
+   "overallLo": 0.14130965683801966,
+   "overallHi": 0.5811297290277166,
+   "eq": 0.37580055114579114,
+   "unionKU": 300420.42110819055,
+   "hours": 62587.587730873034,
+   "peakCat": "bus",
+   "peakCov": 2.352158045049344,
+   "ratioVsAvg": [
+    3.8433381607474417,
+    5.144167986454524,
+    6.732178661321984
+   ]
+  },
+  {
+   "top3": [
+    "math",
+    "cs",
+    "gen"
+   ],
+   "eqLo": 0.19405414376650448,
+   "eqHi": 0.9431224170320406,
+   "id": "tao",
+   "name": "Terence Tao",
+   "group": "individual",
+   "role": "Mathematician",
+   "basis": "PhD Princeton (1996); Fields Medal (2006); UCLA professor; hundreds of papers across harmonic analysis, PDEs, combinatorics, number theory, random matrices and compressed sensing; active in formal proof and AI-assisted mathematics.",
+   "langs": [
+    {
+     "name": "English",
+     "prof": 1.0
+    }
+   ],
+   "ling": 1.0,
+   "cells": [
+    {
+     "cat": "math",
+     "level": 6.0,
+     "ku": 179999.99999999997,
+     "cov": 5.999999999999999,
+     "lo": 2.0971535435901303,
+     "hi": 13.966178652796607
+    },
+    {
+     "cat": "phys",
+     "level": 3.0,
+     "ku": 11999.999999999993,
+     "cov": 0.34285714285714264,
+     "lo": 0.12439832296785511,
+     "hi": 0.9511716694289903
+    },
+    {
+     "cat": "chem",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.06150166003570494,
+     "lo": 0.019284625212871616,
+     "hi": 0.19006747947522096
+    },
+    {
+     "cat": "earth",
+     "level": 1.2,
+     "ku": 1908.3894548090884,
+     "cov": 0.07633557819236354,
+     "lo": 0.023161276273274068,
+     "hi": 0.22655073889918578
+    },
+    {
+     "cat": "bio",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.03075083001785247,
+     "lo": 0.009964032722839643,
+     "hi": 0.08789357190311659
+    },
+    {
+     "cat": "med",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.03075083001785247,
+     "lo": 0.010003993516392251,
+     "hi": 0.09125172917030734
+    },
+    {
+     "cat": "cs",
+     "level": 3.8,
+     "ku": 24976.596222056207,
+     "cov": 0.6244149055514052,
+     "lo": 0.23773667434646226,
+     "hi": 1.7267580780152318
+    },
+    {
+     "cat": "eng",
+     "level": 2.1,
+     "ku": 5457.467128089486,
+     "cov": 0.06821833910111859,
+     "lo": 0.023407786993532458,
+     "hi": 0.18159367742648613
+    },
+    {
+     "cat": "econ",
+     "level": 1.6,
+     "ku": 3089.004252837061,
+     "cov": 0.10296680842790203,
+     "lo": 0.034681776872640964,
+     "hi": 0.3046589468995635
+    },
+    {
+     "cat": "bus",
+     "level": 1.1,
+     "ku": 1691.91730950825,
+     "cov": 0.042297932737706254,
+     "lo": 0.012457859197477345,
+     "hi": 0.11912010820758645
+    },
+    {
+     "cat": "law",
+     "level": 1.1,
+     "ku": 1691.91730950825,
+     "cov": 0.0281986218251375,
+     "lo": 0.0082083045850695,
+     "hi": 0.08150485198199908
+    },
+    {
+     "cat": "psych",
+     "level": 1.4,
+     "ku": 2427.96687415102,
+     "cov": 0.09711867496604079,
+     "lo": 0.03295689306753408,
+     "hi": 0.27520717680802126
+    },
+    {
+     "cat": "soc",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.035875968354161215,
+     "lo": 0.011917577238027695,
+     "hi": 0.10329518765609931
+    },
+    {
+     "cat": "hist",
+     "level": 1.7,
+     "ku": 3484.226509679745,
+     "cov": 0.04355283137099681,
+     "lo": 0.015209371235514338,
+     "hi": 0.12679972973443385
+    },
+    {
+     "cat": "phil",
+     "level": 2.1,
+     "ku": 5457.467128089486,
+     "cov": 0.18191557093631622,
+     "lo": 0.060543676890314285,
+     "hi": 0.49962384124006504
+    },
+    {
+     "cat": "arts",
+     "level": 1.2,
+     "ku": 1908.3894548090884,
+     "cov": 0.03816778909618177,
+     "lo": 0.011278058028534531,
+     "hi": 0.11399547888146538
+    },
+    {
+     "cat": "music",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.06150166003570494,
+     "lo": 0.019674416033720776,
+     "hi": 0.18832563377717645
+    },
+    {
+     "cat": "lit",
+     "level": 1.6,
+     "ku": 3089.004252837061,
+     "cov": 0.03861255316046326,
+     "lo": 0.013647273275061721,
+     "hi": 0.10973029712097081
+    },
+    {
+     "cat": "lang",
+     "level": 1.0,
+     "ku": 13500.0,
+     "cov": 0.06136363636363636,
+     "lo": 0.02264309739782326,
+     "hi": 0.17359072475959983
+    },
+    {
+     "cat": "gen",
+     "level": 4.0,
+     "ku": 30000.000000000007,
+     "cov": 0.37500000000000006,
+     "lo": 0.1316246429934538,
+     "hi": 1.131058683567443
+    }
+   ],
+   "overall": 0.2921841622562104,
+   "overallLo": 0.11909303189832116,
+   "overallHi": 0.4793376324150745,
+   "eq": 0.41707006665238444,
+   "unionKU": 275252.090053463,
+   "hours": 57344.1854278048,
+   "peakCat": "math",
+   "peakCov": 5.999999999999999,
+   "ratioVsAvg": [
+    3.2686794976422693,
+    4.352754514278592,
+    5.537960934285266
+   ]
+  },
+  {
+   "top3": [
+    "cs",
+    "psych",
+    "gen"
+   ],
+   "eqLo": 0.21734586157367122,
+   "eqHi": 0.914620761907686,
+   "id": "hassabis",
+   "name": "Demis Hassabis",
+   "group": "individual",
+   "role": "AI researcher, Google DeepMind CEO",
+   "basis": "Computer science, Cambridge (1997); game designer and programmer (Theme Park, Elixir Studios); PhD cognitive neuroscience, UCL (2009); co-founded DeepMind (2010): AlphaGo, AlphaFold; Nobel Prize in Chemistry (2024); founded Isomorphic Labs for drug discovery.",
+   "langs": [
+    {
+     "name": "English",
+     "prof": 1.0
+    }
+   ],
+   "ling": 1.3,
+   "cells": [
+    {
+     "cat": "math",
+     "level": 3.3,
+     "ku": 15796.58645201085,
+     "cov": 0.526552881733695,
+     "lo": 0.19317463759175368,
+     "hi": 1.4632130492191742
+    },
+    {
+     "cat": "phys",
+     "level": 2.4,
+     "ku": 7096.668207625555,
+     "cov": 0.20276194878930154,
+     "lo": 0.0706427458404096,
+     "hi": 0.5724697392541094
+    },
+    {
+     "cat": "chem",
+     "level": 2.6,
+     "ku": 8454.671719825994,
+     "cov": 0.24156204913788554,
+     "lo": 0.08708122028855252,
+     "hi": 0.6817292009432216
+    },
+    {
+     "cat": "earth",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.10954451150103334,
+     "lo": 0.03581282901694209,
+     "hi": 0.32975217502538023
+    },
+    {
+     "cat": "bio",
+     "level": 3.3,
+     "ku": 15796.58645201085,
+     "cov": 0.22566552074301216,
+     "lo": 0.08506122638271549,
+     "hi": 0.600415155735647
+    },
+    {
+     "cat": "med",
+     "level": 2.3,
+     "ku": 6501.7965670366775,
+     "cov": 0.09288280810052396,
+     "lo": 0.033464444201986715,
+     "hi": 0.2558555176662324
+    },
+    {
+     "cat": "cs",
+     "level": 5.4,
+     "ku": 110652.94937780732,
+     "cov": 2.766323734445183,
+     "lo": 1.030475174960747,
+     "hi": 7.2762775175993974
+    },
+    {
+     "cat": "eng",
+     "level": 2.6,
+     "ku": 8454.671719825994,
+     "cov": 0.10568339649782493,
+     "lo": 0.039058545271812656,
+     "hi": 0.28758622304225245
+    },
+    {
+     "cat": "econ",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.13100051426610376,
+     "lo": 0.045724438995282106,
+     "hi": 0.3743722531491824
+    },
+    {
+     "cat": "bus",
+     "level": 3.8,
+     "ku": 24976.596222056207,
+     "cov": 0.6244149055514052,
+     "lo": 0.23410420134456927,
+     "hi": 1.6796853536020653
+    },
+    {
+     "cat": "law",
+     "level": 1.4,
+     "ku": 2427.96687415102,
+     "cov": 0.04046611456918366,
+     "lo": 0.013341803443322342,
+     "hi": 0.11935466417790663
+    },
+    {
+     "cat": "psych",
+     "level": 4.1,
+     "ku": 33091.627572662095,
+     "cov": 1.3236651029064839,
+     "lo": 0.5020123968926381,
+     "hi": 3.5903218853035437
+    },
+    {
+     "cat": "soc",
+     "level": 1.7,
+     "ku": 3484.226509679745,
+     "cov": 0.05807044182799575,
+     "lo": 0.020119322227726676,
+     "hi": 0.16335008987331162
+    },
+    {
+     "cat": "hist",
+     "level": 2.1,
+     "ku": 5457.467128089486,
+     "cov": 0.06821833910111859,
+     "lo": 0.02447972233894558,
+     "hi": 0.1793838973159029
+    },
+    {
+     "cat": "phil",
+     "level": 2.4,
+     "ku": 7096.668207625555,
+     "cov": 0.2365556069208518,
+     "lo": 0.0828818150017199,
+     "hi": 0.6591690783946009
+    },
+    {
+     "cat": "arts",
+     "level": 2.3,
+     "ku": 6501.7965670366775,
+     "cov": 0.13003593134073355,
+     "lo": 0.04519503071506711,
+     "hi": 0.3635666283464842
+    },
+    {
+     "cat": "music",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.06150166003570494,
+     "lo": 0.019342617719442134,
+     "hi": 0.18421234026157435
+    },
+    {
+     "cat": "lit",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.04912519284978891,
+     "lo": 0.017098146002912675,
+     "hi": 0.13496250305664276
+    },
+    {
+     "cat": "lang",
+     "level": 1.3,
+     "ku": 14152.558101249673,
+     "cov": 0.06432980955113488,
+     "lo": 0.02375535552946522,
+     "hi": 0.179894693800003
+    },
+    {
+     "cat": "gen",
+     "level": 4.55,
+     "ku": 51452.21283689328,
+     "cov": 0.643152660461166,
+     "lo": 0.22166591002433442,
+     "hi": 1.904210840997738
+    }
+   ],
+   "overall": 0.30870505838103124,
+   "overallLo": 0.13575073227030238,
+   "overallHi": 0.5508937512217165,
+   "eq": 0.38507565651650655,
+   "unionKU": 290815.60024785047,
+   "hours": 60586.58338496884,
+   "peakCat": "cs",
+   "peakCov": 2.766323734445183,
+   "ratioVsAvg": [
+    3.6868885316428175,
+    4.947268069953867,
+    6.485385938379147
+   ]
+  },
+  {
+   "top3": [
+    "chem",
+    "bio",
+    "gen"
+   ],
+   "eqLo": 0.16532325922647692,
+   "eqHi": 0.7193479501314705,
+   "id": "doudna",
+   "name": "Jennifer Doudna",
+   "group": "individual",
+   "role": "Biochemist",
+   "basis": "PhD Harvard (1989); UC Berkeley professor; co-developed CRISPR-Cas9 genome editing (2012); Nobel Prize in Chemistry (2020); founded the Innovative Genomics Institute; co-founded several biotech companies; public work on the ethics of gene editing.",
+   "langs": [
+    {
+     "name": "English",
+     "prof": 1.0
+    }
+   ],
+   "ling": 1.0,
+   "cells": [
+    {
+     "cat": "math",
+     "level": 2.4,
+     "ku": 7096.668207625555,
+     "cov": 0.2365556069208518,
+     "lo": 0.08507816452373657,
+     "hi": 0.6454281071717508
+    },
+    {
+     "cat": "phys",
+     "level": 2.4,
+     "ku": 7096.668207625555,
+     "cov": 0.20276194878930154,
+     "lo": 0.07094892630989286,
+     "hi": 0.5694060207484234
+    },
+    {
+     "cat": "chem",
+     "level": 4.8,
+     "ku": 65750.07318068903,
+     "cov": 1.8785735194482578,
+     "lo": 0.6653652450410636,
+     "hi": 5.577093506444307
+    },
+    {
+     "cat": "earth",
+     "level": 1.2,
+     "ku": 1908.3894548090884,
+     "cov": 0.07633557819236354,
+     "lo": 0.02341585107189473,
+     "hi": 0.22503550516139903
+    },
+    {
+     "cat": "bio",
+     "level": 5.5,
+     "ku": 119999.99999999984,
+     "cov": 1.714285714285712,
+     "lo": 0.6618905526001131,
+     "hi": 4.398764461793504
+    },
+    {
+     "cat": "med",
+     "level": 3.2,
+     "ku": 14413.493207777163,
+     "cov": 0.20590704582538802,
+     "lo": 0.07770177175674958,
+     "hi": 0.5584574697244614
+    },
+    {
+     "cat": "cs",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.09825038569957782,
+     "lo": 0.034350381447109106,
+     "hi": 0.2662744333382883
+    },
+    {
+     "cat": "eng",
+     "level": 2.3,
+     "ku": 6501.7965670366775,
+     "cov": 0.08127245708795847,
+     "lo": 0.029859298247407354,
+     "hi": 0.21910586420477215
+    },
+    {
+     "cat": "econ",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.07175193670832243,
+     "lo": 0.023586725986370034,
+     "hi": 0.21230764035506874
+    },
+    {
+     "cat": "bus",
+     "level": 2.8,
+     "ku": 10072.539929824636,
+     "cov": 0.2518134982456159,
+     "lo": 0.09464306972123289,
+     "hi": 0.670104289691283
+    },
+    {
+     "cat": "law",
+     "level": 2.0,
+     "ku": 5000.000000000004,
+     "cov": 0.0833333333333334,
+     "lo": 0.0291457556990442,
+     "hi": 0.22723493571914385
+    },
+    {
+     "cat": "psych",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.08610232404998691,
+     "lo": 0.028835772982400098,
+     "hi": 0.24315071037596236
+    },
+    {
+     "cat": "soc",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.06550025713305188,
+     "lo": 0.022841282062558213,
+     "hi": 0.18389642733885767
+    },
+    {
+     "cat": "hist",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.03423265984407291,
+     "lo": 0.012177391286322618,
+     "hi": 0.09760347548807764
+    },
+    {
+     "cat": "phil",
+     "level": 2.2,
+     "ku": 5956.7894908354565,
+     "cov": 0.19855964969451523,
+     "lo": 0.06807170174219912,
+     "hi": 0.5498927911116445
+    },
+    {
+     "cat": "arts",
+     "level": 1.2,
+     "ku": 1908.3894548090884,
+     "cov": 0.03816778909618177,
+     "lo": 0.011268042780200884,
+     "hi": 0.11370893515362658
+    },
+    {
+     "cat": "music",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.06150166003570494,
+     "lo": 0.01978258488015455,
+     "hi": 0.18364587023360873
+    },
+    {
+     "cat": "lit",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.03423265984407291,
+     "lo": 0.011767376029084333,
+     "hi": 0.09684499538273317
+    },
+    {
+     "cat": "lang",
+     "level": 1.0,
+     "ku": 13500.0,
+     "cov": 0.06136363636363636,
+     "lo": 0.02250235530050887,
+     "hi": 0.16999092529527401
+    },
+    {
+     "cat": "gen",
+     "level": 4.0,
+     "ku": 30000.000000000007,
+     "cov": 0.37500000000000006,
+     "lo": 0.13410557600345063,
+     "hi": 1.1372240808386032
+    }
+   ],
+   "overall": 0.28299234192371225,
+   "overallLo": 0.12373494019769177,
+   "overallHi": 0.5054933060129725,
+   "eq": 0.29277508302989536,
+   "unionKU": 266592.93570923316,
+   "hours": 55540.19493942358,
+   "peakCat": "chem",
+   "peakCov": 1.8785735194482578,
+   "ratioVsAvg": [
+    3.3702382221619795,
+    4.507744788638907,
+    5.948808095455731
+   ]
+  },
+  {
+   "top3": [
+    "bus",
+    "econ",
+    "gen"
+   ],
+   "eqLo": 0.1811037609851936,
+   "eqHi": 0.7925826968409485,
+   "id": "buffett",
+   "name": "Warren Buffett",
+   "group": "individual",
+   "role": "Investor",
+   "basis": "MS economics, Columbia (1951), studying under Benjamin Graham; ran Berkshire Hathaway for about six decades (CEO until the end of 2025, chairman until September 2026); deep exposure to insurance, finance, accounting and dozens of industries; a famously heavy reader of annual reports.",
+   "langs": [
+    {
+     "name": "English",
+     "prof": 1.0
+    }
+   ],
+   "ling": 1.0,
+   "cells": [
+    {
+     "cat": "math",
+     "level": 2.4,
+     "ku": 7096.668207625555,
+     "cov": 0.2365556069208518,
+     "lo": 0.08432614276260444,
+     "hi": 0.6540711111645998
+    },
+    {
+     "cat": "phys",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.04285714285714286,
+     "lo": 0.011245380680802757,
+     "hi": 0.12716984102612172
+    },
+    {
+     "cat": "chem",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.04285714285714286,
+     "lo": 0.011672375557381634,
+     "hi": 0.1286337214727468
+    },
+    {
+     "cat": "earth",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.06,
+     "lo": 0.016059854853873033,
+     "hi": 0.17375184243783567
+    },
+    {
+     "cat": "bio",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.02142857142857143,
+     "lo": 0.005924494629339115,
+     "hi": 0.05881406960627257
+    },
+    {
+     "cat": "med",
+     "level": 1.2,
+     "ku": 1908.3894548090884,
+     "cov": 0.02726270649727269,
+     "lo": 0.008656046753131445,
+     "hi": 0.07693917907572831
+    },
+    {
+     "cat": "cs",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.0375,
+     "lo": 0.010527181168945526,
+     "hi": 0.10505429369445664
+    },
+    {
+     "cat": "eng",
+     "level": 1.6,
+     "ku": 3089.004252837061,
+     "cov": 0.03861255316046326,
+     "lo": 0.013557159131341841,
+     "hi": 0.11169372646776193
+    },
+    {
+     "cat": "econ",
+     "level": 4.2,
+     "ku": 36501.860513592335,
+     "cov": 1.2167286837864113,
+     "lo": 0.4425734340991962,
+     "hi": 3.4712600709125367
+    },
+    {
+     "cat": "bus",
+     "level": 5.7,
+     "ku": 141129.4827029608,
+     "cov": 3.52823706757402,
+     "lo": 1.3183302603080072,
+     "hi": 8.655696726052271
+    },
+    {
+     "cat": "law",
+     "level": 2.6,
+     "ku": 8454.671719825994,
+     "cov": 0.14091119533043323,
+     "lo": 0.05246232358955496,
+     "hi": 0.38762680388270915
+    },
+    {
+     "cat": "psych",
+     "level": 2.3,
+     "ku": 6501.7965670366775,
+     "cov": 0.2600718626814671,
+     "lo": 0.0962982618361132,
+     "hi": 0.7095469692903965
+    },
+    {
+     "cat": "soc",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.06550025713305188,
+     "lo": 0.022572073496143794,
+     "hi": 0.18281929527119836
+    },
+    {
+     "cat": "hist",
+     "level": 2.5,
+     "ku": 7745.966692414834,
+     "cov": 0.09682458365518543,
+     "lo": 0.03658398372560899,
+     "hi": 0.2597674649091343
+    },
+    {
+     "cat": "phil",
+     "level": 1.6,
+     "ku": 3089.004252837061,
+     "cov": 0.10296680842790203,
+     "lo": 0.034309002111960564,
+     "hi": 0.297812493279768
+    },
+    {
+     "cat": "arts",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.03,
+     "lo": 0.00783008545498616,
+     "hi": 0.08726774254664353
+    },
+    {
+     "cat": "music",
+     "level": 1.4,
+     "ku": 2427.96687415102,
+     "cov": 0.06937048211860057,
+     "lo": 0.02343782864778745,
+     "hi": 0.213294833783502
+    },
+    {
+     "cat": "lit",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.03423265984407291,
+     "lo": 0.011692898248260012,
+     "hi": 0.09648520430519231
+    },
+    {
+     "cat": "lang",
+     "level": 1.0,
+     "ku": 13500.0,
+     "cov": 0.06136363636363636,
+     "lo": 0.022420739693506664,
+     "hi": 0.1695549788009351
+    },
+    {
+     "cat": "gen",
+     "level": 4.55,
+     "ku": 51452.21283689328,
+     "cov": 0.643152660461166,
+     "lo": 0.22149162071149267,
+     "hi": 1.8791992863954363
+    }
+   ],
+   "overall": 0.2838853633264061,
+   "overallLo": 0.12372898042500205,
+   "overallHi": 0.5010177976220297,
+   "eq": 0.3378216810548696,
+   "unionKU": 267434.2065216409,
+   "hours": 55715.45969200852,
+   "peakCat": "bus",
+   "peakCov": 3.52823706757402,
+   "ratioVsAvg": [
+    3.3023916058008784,
+    4.467467559281662,
+    5.871340245679037
+   ]
+  },
+  {
+   "top3": [
+    "phil",
+    "psych",
+    "lang"
+   ],
+   "eqLo": 0.2121650740168484,
+   "eqHi": 0.9296663512124249,
+   "id": "chomsky",
+   "name": "Noam Chomsky",
+   "group": "individual",
+   "role": "Linguist, public intellectual",
+   "basis": "PhD linguistics, University of Pennsylvania (1955); taught at MIT from 1955; founded generative grammar (Syntactic Structures, 1957); a central figure in cognitive science and the philosophy of language and mind; 150+ books on linguistics, politics and media.",
+   "langs": [
+    {
+     "name": "English",
+     "prof": 1.0
+    },
+    {
+     "name": "Hebrew (MA thesis on Modern Hebrew)",
+     "prof": 0.5
+    },
+    {
+     "name": "Reading French and German (assumed)",
+     "prof": 0.2
+    }
+   ],
+   "ling": 5.8,
+   "cells": [
+    {
+     "cat": "math",
+     "level": 3.0,
+     "ku": 11999.999999999993,
+     "cov": 0.39999999999999974,
+     "lo": 0.14553591533857765,
+     "hi": 1.116551831414351
+    },
+    {
+     "cat": "phys",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.06150166003570494,
+     "lo": 0.019047163234704054,
+     "hi": 0.17981527419356552
+    },
+    {
+     "cat": "chem",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.04285714285714286,
+     "lo": 0.011323067910677791,
+     "hi": 0.1319543778920651
+    },
+    {
+     "cat": "earth",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.06,
+     "lo": 0.01593123045996262,
+     "hi": 0.17690903371289612
+    },
+    {
+     "cat": "bio",
+     "level": 2.0,
+     "ku": 5000.000000000004,
+     "cov": 0.07142857142857148,
+     "lo": 0.024490635103605034,
+     "hi": 0.1880461795556744
+    },
+    {
+     "cat": "med",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.02142857142857143,
+     "lo": 0.005894952128572459,
+     "hi": 0.05999093907326934
+    },
+    {
+     "cat": "cs",
+     "level": 2.8,
+     "ku": 10072.539929824636,
+     "cov": 0.2518134982456159,
+     "lo": 0.0963670300671262,
+     "hi": 0.6670351903619998
+    },
+    {
+     "cat": "eng",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.01875,
+     "lo": 0.005308519190953105,
+     "hi": 0.05211555050066099
+    },
+    {
+     "cat": "econ",
+     "level": 2.2,
+     "ku": 5956.7894908354565,
+     "cov": 0.19855964969451523,
+     "lo": 0.07141129707632893,
+     "hi": 0.5474374926282478
+    },
+    {
+     "cat": "bus",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.05381395253124182,
+     "lo": 0.017598542181990057,
+     "hi": 0.1547883324521263
+    },
+    {
+     "cat": "law",
+     "level": 2.2,
+     "ku": 5956.7894908354565,
+     "cov": 0.09927982484725761,
+     "lo": 0.035784647203950554,
+     "hi": 0.2696265460128167
+    },
+    {
+     "cat": "psych",
+     "level": 4.4,
+     "ku": 44412.86069845845,
+     "cov": 1.7765144279383378,
+     "lo": 0.6574828334705072,
+     "hi": 4.8830834119026045
+    },
+    {
+     "cat": "soc",
+     "level": 4.1,
+     "ku": 33091.627572662095,
+     "cov": 0.551527126211035,
+     "lo": 0.20636805733509636,
+     "hi": 1.5186338108662942
+    },
+    {
+     "cat": "hist",
+     "level": 3.7,
+     "ku": 22789.733787971207,
+     "cov": 0.28487167234964006,
+     "lo": 0.1088376684408711,
+     "hi": 0.7896652299472
+    },
+    {
+     "cat": "phil",
+     "level": 4.8,
+     "ku": 65750.07318068903,
+     "cov": 2.1916691060229674,
+     "lo": 0.7654445281070116,
+     "hi": 6.045624667452603
+    },
+    {
+     "cat": "arts",
+     "level": 1.2,
+     "ku": 1908.3894548090884,
+     "cov": 0.03816778909618177,
+     "lo": 0.011431120225831726,
+     "hi": 0.11247614693628118
+    },
+    {
+     "cat": "music",
+     "level": 1.1,
+     "ku": 1691.91730950825,
+     "cov": 0.048340494557378565,
+     "lo": 0.014280678505996588,
+     "hi": 0.1437866239623133
+    },
+    {
+     "cat": "lit",
+     "level": 2.2,
+     "ku": 5956.7894908354565,
+     "cov": 0.0744598686354432,
+     "lo": 0.02691142143334334,
+     "hi": 0.19569769369231085
+    },
+    {
+     "cat": "lang",
+     "level": 5.8,
+     "ku": 173450.94007509496,
+     "cov": 0.7884133639777043,
+     "lo": 0.27287636398946824,
+     "hi": 2.104785445198911
+    },
+    {
+     "cat": "gen",
+     "level": 4.4,
+     "ku": 44412.86069845845,
+     "cov": 0.5551607587307306,
+     "lo": 0.18963777023397077,
+     "hi": 1.6613471750219555
+    }
+   ],
+   "overall": 0.41668318739341476,
+   "overallLo": 0.18271969330262308,
+   "overallHi": 0.7332328946581683,
+   "eq": 0.3794278739294019,
+   "unionKU": 392536.39668396633,
+   "hours": 81778.41597582633,
+   "peakCat": "phil",
+   "peakCov": 2.1916691060229674,
+   "ratioVsAvg": [
+    5.0133833608373815,
+    6.567455147291135,
+    8.506544598930022
+   ]
+  },
+  {
+   "top3": [
+    "econ",
+    "phil",
+    "soc"
+   ],
+   "eqLo": 0.2788711541056315,
+   "eqHi": 1.2502237542848937,
+   "id": "sen",
+   "name": "Amartya Sen",
+   "group": "individual",
+   "role": "Economist, philosopher",
+   "basis": "Schooled at Santiniketan; Presidency College, Calcutta; PhD Cambridge (1959); Nobel Prize in Economics (1998) for welfare economics and social choice; Harvard professor of economics and philosophy; books on development, justice, famine, and Indian history and culture.",
+   "langs": [
+    {
+     "name": "Bengali",
+     "prof": 1.0
+    },
+    {
+     "name": "English",
+     "prof": 1.0
+    },
+    {
+     "name": "Sanskrit (reading, assumed partial)",
+     "prof": 0.3
+    }
+   ],
+   "ling": 1.5,
+   "cells": [
+    {
+     "cat": "math",
+     "level": 3.4,
+     "ku": 17312.398870886547,
+     "cov": 0.577079962362885,
+     "lo": 0.21102029234087955,
+     "hi": 1.5810666303826877
+    },
+    {
+     "cat": "phys",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.06150166003570494,
+     "lo": 0.019192189399634407,
+     "hi": 0.18551908293294259
+    },
+    {
+     "cat": "chem",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.04285714285714286,
+     "lo": 0.011549962131629794,
+     "hi": 0.13189366867632832
+    },
+    {
+     "cat": "earth",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.08610232404998691,
+     "lo": 0.027157132823355048,
+     "hi": 0.25968798945268845
+    },
+    {
+     "cat": "bio",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.03075083001785247,
+     "lo": 0.010374901345327172,
+     "hi": 0.08773322378366369
+    },
+    {
+     "cat": "med",
+     "level": 1.9,
+     "ku": 4432.840752826071,
+     "cov": 0.06332629646894387,
+     "lo": 0.02211734138794413,
+     "hi": 0.16989622149602532
+    },
+    {
+     "cat": "cs",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.0375,
+     "lo": 0.010634331865983615,
+     "hi": 0.10692594009778572
+    },
+    {
+     "cat": "eng",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.01875,
+     "lo": 0.005287665912405394,
+     "hi": 0.05337871757175353
+    },
+    {
+     "cat": "econ",
+     "level": 5.8,
+     "ku": 153050.94007509496,
+     "cov": 5.1016980025031655,
+     "lo": 1.8822560658503857,
+     "hi": 12.865994749061871
+    },
+    {
+     "cat": "bus",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.05381395253124182,
+     "lo": 0.017822880970767382,
+     "hi": 0.14952715539983655
+    },
+    {
+     "cat": "law",
+     "level": 2.3,
+     "ku": 6501.7965670366775,
+     "cov": 0.10836327611727795,
+     "lo": 0.03839606735368153,
+     "hi": 0.29512881401665775
+    },
+    {
+     "cat": "psych",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.1572006171193245,
+     "lo": 0.05512394157445222,
+     "hi": 0.43149363342169633
+    },
+    {
+     "cat": "soc",
+     "level": 4.4,
+     "ku": 44412.86069845845,
+     "cov": 0.7402143449743074,
+     "lo": 0.27264256263308084,
+     "hi": 2.01223058865146
+    },
+    {
+     "cat": "hist",
+     "level": 3.5,
+     "ku": 18973.665961010272,
+     "cov": 0.2371708245126284,
+     "lo": 0.092013029099942,
+     "hi": 0.6544585517893445
+    },
+    {
+     "cat": "phil",
+     "level": 4.8,
+     "ku": 65750.07318068903,
+     "cov": 2.1916691060229674,
+     "lo": 0.7806369157818775,
+     "hi": 6.08548439704714
+    },
+    {
+     "cat": "arts",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.07860030855966225,
+     "lo": 0.025585741229898686,
+     "hi": 0.22770510843029917
+    },
+    {
+     "cat": "music",
+     "level": 1.6,
+     "ku": 3089.004252837061,
+     "cov": 0.08825726436677317,
+     "lo": 0.029941973753456478,
+     "hi": 0.27471398904196154
+    },
+    {
+     "cat": "lit",
+     "level": 3.0,
+     "ku": 11999.999999999993,
+     "cov": 0.1499999999999999,
+     "lo": 0.05600071123706391,
+     "hi": 0.4036346038500921
+    },
+    {
+     "cat": "lang",
+     "level": 1.5,
+     "ku": 30338.612787525828,
+     "cov": 0.13790278539784467,
+     "lo": 0.0501805902490537,
+     "hi": 0.3850522934935286
+    },
+    {
+     "cat": "gen",
+     "level": 4.4,
+     "ku": 44412.86069845845,
+     "cov": 0.5551607587307306,
+     "lo": 0.1921427794945953,
+     "hi": 1.6507280584224138
+    }
+   ],
+   "overall": 0.39778380037621475,
+   "overallLo": 0.17404564826202848,
+   "overallHi": 0.6997552053951768,
+   "eq": 0.525895972831422,
+   "unionKU": 374732.22914441314,
+   "hours": 78069.21440508608,
+   "peakCat": "econ",
+   "peakCov": 5.1016980025031655,
+   "ratioVsAvg": [
+    4.736172338874146,
+    6.260195733347673,
+    8.051940175759832
+   ]
+  },
+  {
+   "top3": [
+    "bus",
+    "cs",
+    "gen"
+   ],
+   "eqLo": 0.15923333558726285,
+   "eqHi": 0.6593657791791744,
+   "id": "pichai",
+   "name": "Sundar Pichai",
+   "group": "individual",
+   "role": "Engineer, Alphabet CEO",
+   "basis": "B.Tech metallurgical engineering, IIT Kharagpur (1993); MS materials science, Stanford; MBA, Wharton (2002); worked at Applied Materials and McKinsey; led Chrome and Android at Google; CEO of Google (2015) and Alphabet (2019).",
+   "langs": [
+    {
+     "name": "Tamil",
+     "prof": 1.0
+    },
+    {
+     "name": "English",
+     "prof": 1.0
+    },
+    {
+     "name": "Hindi (partial, assumed)",
+     "prof": 0.3
+    }
+   ],
+   "ling": 1.0,
+   "cells": [
+    {
+     "cat": "math",
+     "level": 2.8,
+     "ku": 10072.539929824636,
+     "cov": 0.33575133099415455,
+     "lo": 0.1238824375906479,
+     "hi": 0.9162621511729767
+    },
+    {
+     "cat": "phys",
+     "level": 2.8,
+     "ku": 10072.539929824636,
+     "cov": 0.28778685513784674,
+     "lo": 0.10310883738647522,
+     "hi": 0.820411728015515
+    },
+    {
+     "cat": "chem",
+     "level": 2.7,
+     "ku": 9228.218597947644,
+     "cov": 0.2636633885127898,
+     "lo": 0.09482362932002686,
+     "hi": 0.7836068345312928
+    },
+    {
+     "cat": "earth",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.08610232404998691,
+     "lo": 0.027303040038376466,
+     "hi": 0.2562330001804452
+    },
+    {
+     "cat": "bio",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.03075083001785247,
+     "lo": 0.010348780534666195,
+     "hi": 0.08534544896640184
+    },
+    {
+     "cat": "med",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.03075083001785247,
+     "lo": 0.010142711096869952,
+     "hi": 0.08786111513934208
+    },
+    {
+     "cat": "cs",
+     "level": 3.8,
+     "ku": 24976.596222056207,
+     "cov": 0.6244149055514052,
+     "lo": 0.2323886496487801,
+     "hi": 1.7200520526416023
+    },
+    {
+     "cat": "eng",
+     "level": 3.8,
+     "ku": 24976.596222056207,
+     "cov": 0.3122074527757026,
+     "lo": 0.11607977742566161,
+     "hi": 0.8356805712843098
+    },
+    {
+     "cat": "econ",
+     "level": 2.7,
+     "ku": 9228.218597947644,
+     "cov": 0.30760728659825476,
+     "lo": 0.11546277111641316,
+     "hi": 0.8493576738027897
+    },
+    {
+     "cat": "bus",
+     "level": 5.0,
+     "ku": 79999.99999999994,
+     "cov": 1.9999999999999987,
+     "lo": 0.7283413963670301,
+     "hi": 5.161490088831303
+    },
+    {
+     "cat": "law",
+     "level": 2.2,
+     "ku": 5956.7894908354565,
+     "cov": 0.09927982484725761,
+     "lo": 0.035109930455747576,
+     "hi": 0.27140407549683737
+    },
+    {
+     "cat": "psych",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.1572006171193245,
+     "lo": 0.05558134570963878,
+     "hi": 0.4397137960634527
+    },
+    {
+     "cat": "soc",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.06550025713305188,
+     "lo": 0.022780787060610954,
+     "hi": 0.1826000884421795
+    },
+    {
+     "cat": "hist",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.04912519284978891,
+     "lo": 0.017427713557670147,
+     "hi": 0.13545212583903157
+    },
+    {
+     "cat": "phil",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.09128709291752778,
+     "lo": 0.030003699830279812,
+     "hi": 0.2767330304201959
+    },
+    {
+     "cat": "arts",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.043051162024993456,
+     "lo": 0.013202674828659708,
+     "hi": 0.12666058169720074
+    },
+    {
+     "cat": "music",
+     "level": 1.2,
+     "ku": 1908.3894548090884,
+     "cov": 0.05452541299454538,
+     "lo": 0.01664665358309466,
+     "hi": 0.16424615992723396
+    },
+    {
+     "cat": "lit",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.03423265984407291,
+     "lo": 0.011765998093178963,
+     "hi": 0.0969108425056728
+    },
+    {
+     "cat": "lang",
+     "level": 1.0,
+     "ku": 29099.999999999996,
+     "cov": 0.13227272727272726,
+     "lo": 0.047438335765454503,
+     "hi": 0.37226558756715994
+    },
+    {
+     "cat": "gen",
+     "level": 4.4,
+     "ku": 44412.86069845845,
+     "cov": 0.5551607587307306,
+     "lo": 0.19340395402632954,
+     "hi": 1.6860373203365677
+    }
+   ],
+   "overall": 0.24967256479997252,
+   "overallLo": 0.11267375339549862,
+   "overallHi": 0.44605749696232116,
+   "eq": 0.2780335454694932,
+   "unionKU": 235204.03966981408,
+   "hours": 49000.84159787793,
+   "peakCat": "bus",
+   "peakCov": 1.9999999999999987,
+   "ratioVsAvg": [
+    3.0513055023938103,
+    4.056835389978097,
+    5.288404234166
+   ]
+  },
+  {
+   "top3": [
+    "law",
+    "soc",
+    "gen"
+   ],
+   "eqLo": 0.15951322244839253,
+   "eqHi": 0.662361550953001,
+   "id": "obama",
+   "name": "Barack Obama",
+   "group": "individual",
+   "role": "Lawyer, politician, author",
+   "basis": "BA political science, Columbia (1983); JD Harvard (1991) and president of the Harvard Law Review; taught constitutional law at the University of Chicago Law School (1992-2004); US President (2009-2017); author of three bestselling books.",
+   "langs": [
+    {
+     "name": "English",
+     "prof": 1.0
+    },
+    {
+     "name": "Indonesian (childhood, partial)",
+     "prof": 0.2
+    }
+   ],
+   "ling": 1.0,
+   "cells": [
+    {
+     "cat": "math",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.09128709291752778,
+     "lo": 0.03034020076118302,
+     "hi": 0.26739459865293136
+    },
+    {
+     "cat": "phys",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.06150166003570494,
+     "lo": 0.019214049524366526,
+     "hi": 0.18764317718586546
+    },
+    {
+     "cat": "chem",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.04285714285714286,
+     "lo": 0.011443437474189124,
+     "hi": 0.13169587670581037
+    },
+    {
+     "cat": "earth",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.1572006171193245,
+     "lo": 0.052699995903089124,
+     "hi": 0.45224943190301603
+    },
+    {
+     "cat": "bio",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.03075083001785247,
+     "lo": 0.010218124963948581,
+     "hi": 0.0846485992262838
+    },
+    {
+     "cat": "med",
+     "level": 2.0,
+     "ku": 5000.000000000004,
+     "cov": 0.07142857142857148,
+     "lo": 0.024273697328151923,
+     "hi": 0.18587071960122342
+    },
+    {
+     "cat": "cs",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.05381395253124182,
+     "lo": 0.018054980487616206,
+     "hi": 0.1500434947191305
+    },
+    {
+     "cat": "eng",
+     "level": 1.2,
+     "ku": 1908.3894548090884,
+     "cov": 0.023854868185113603,
+     "lo": 0.007502882157169632,
+     "hi": 0.06960663736858479
+    },
+    {
+     "cat": "econ",
+     "level": 3.0,
+     "ku": 11999.999999999993,
+     "cov": 0.39999999999999974,
+     "lo": 0.1487483465802015,
+     "hi": 1.1333844916363607
+    },
+    {
+     "cat": "bus",
+     "level": 2.0,
+     "ku": 5000.000000000004,
+     "cov": 0.12500000000000008,
+     "lo": 0.04345247384709527,
+     "hi": 0.3270401441058129
+    },
+    {
+     "cat": "law",
+     "level": 5.0,
+     "ku": 79999.99999999994,
+     "cov": 1.3333333333333324,
+     "lo": 0.48340713727292384,
+     "hi": 3.5629061818728935
+    },
+    {
+     "cat": "psych",
+     "level": 2.0,
+     "ku": 5000.000000000004,
+     "cov": 0.20000000000000012,
+     "lo": 0.06975680133916161,
+     "hi": 0.5369017148165605
+    },
+    {
+     "cat": "soc",
+     "level": 4.8,
+     "ku": 65750.07318068903,
+     "cov": 1.0958345530114837,
+     "lo": 0.40566860413433525,
+     "hi": 2.9871857305834757
+    },
+    {
+     "cat": "hist",
+     "level": 3.8,
+     "ku": 24976.596222056207,
+     "cov": 0.3122074527757026,
+     "lo": 0.11885877368574684,
+     "hi": 0.8462066329514594
+    },
+    {
+     "cat": "phil",
+     "level": 2.7,
+     "ku": 9228.218597947644,
+     "cov": 0.30760728659825476,
+     "lo": 0.11077133499184902,
+     "hi": 0.8576304426335564
+    },
+    {
+     "cat": "arts",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.07860030855966225,
+     "lo": 0.025929547388214853,
+     "hi": 0.22794405517611882
+    },
+    {
+     "cat": "music",
+     "level": 2.0,
+     "ku": 5000.000000000004,
+     "cov": 0.14285714285714296,
+     "lo": 0.04793980689081704,
+     "hi": 0.3987299581712738
+    },
+    {
+     "cat": "lit",
+     "level": 3.3,
+     "ku": 15796.58645201085,
+     "cov": 0.19745733065013563,
+     "lo": 0.07363910964694458,
+     "hi": 0.5249467736354511
+    },
+    {
+     "cat": "lang",
+     "level": 1.0,
+     "ku": 15900.0,
+     "cov": 0.07227272727272728,
+     "lo": 0.02641349708309882,
+     "hi": 0.2037050340025612
+    },
+    {
+     "cat": "gen",
+     "level": 4.7,
+     "ku": 59607.28861369785,
+     "cov": 0.7450911076712231,
+     "lo": 0.25193643740337773,
+     "hi": 2.1713823857302463
+    }
+   ],
+   "overall": 0.2950873196017232,
+   "overallLo": 0.1308002952588107,
+   "overallHi": 0.5340778079533265,
+   "eq": 0.27714779889110724,
+   "unionKU": 277987.00943080336,
+   "hours": 57913.960298084035,
+   "peakCat": "law",
+   "peakCov": 1.3333333333333324,
+   "ratioVsAvg": [
+    3.579339826401846,
+    4.727853538865581,
+    6.230728404539731
+   ]
+  },
+  {
+   "top3": [
+    "phys",
+    "gen",
+    "math"
+   ],
+   "eqLo": 0.16067511892504113,
+   "eqHi": 0.6891637666694188,
+   "id": "tyson",
+   "name": "Neil deGrasse Tyson",
+   "group": "individual",
+   "role": "Astrophysicist, science communicator",
+   "basis": "BA physics, Harvard (1980); PhD astrophysics, Columbia (1991); director of the Hayden Planetarium since 1996; served on US presidential commissions on the aerospace industry (2001) and space exploration (2004); hosted Cosmos (2014) and StarTalk; many popular-science books.",
+   "langs": [
+    {
+     "name": "English",
+     "prof": 1.0
+    }
+   ],
+   "ling": 1.0,
+   "cells": [
+    {
+     "cat": "math",
+     "level": 3.5,
+     "ku": 18973.665961010272,
+     "cov": 0.6324555320336757,
+     "lo": 0.2327298120745008,
+     "hi": 1.759104347139061
+    },
+    {
+     "cat": "phys",
+     "level": 5.0,
+     "ku": 79999.99999999994,
+     "cov": 2.285714285714284,
+     "lo": 0.8096939572540738,
+     "hi": 6.162358026062575
+    },
+    {
+     "cat": "chem",
+     "level": 2.4,
+     "ku": 7096.668207625555,
+     "cov": 0.20276194878930154,
+     "lo": 0.0724535480285723,
+     "hi": 0.5991665502767741
+    },
+    {
+     "cat": "earth",
+     "level": 2.9,
+     "ku": 10994.111112677358,
+     "cov": 0.4397644445070943,
+     "lo": 0.15642531277316152,
+     "hi": 1.2347367283433286
+    },
+    {
+     "cat": "bio",
+     "level": 2.3,
+     "ku": 6501.7965670366775,
+     "cov": 0.09288280810052396,
+     "lo": 0.034306718336856785,
+     "hi": 0.24283884921741516
+    },
+    {
+     "cat": "med",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.03075083001785247,
+     "lo": 0.010171498792693464,
+     "hi": 0.0904190755093725
+    },
+    {
+     "cat": "cs",
+     "level": 2.0,
+     "ku": 5000.000000000004,
+     "cov": 0.12500000000000008,
+     "lo": 0.042590638695257976,
+     "hi": 0.32179642319057666
+    },
+    {
+     "cat": "eng",
+     "level": 2.3,
+     "ku": 6501.7965670366775,
+     "cov": 0.08127245708795847,
+     "lo": 0.02979405336181514,
+     "hi": 0.21785723374829974
+    },
+    {
+     "cat": "econ",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.09128709291752778,
+     "lo": 0.030656070833331675,
+     "hi": 0.2708176031760353
+    },
+    {
+     "cat": "bus",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.09825038569957782,
+     "lo": 0.03499142432385968,
+     "hi": 0.26714703673084456
+    },
+    {
+     "cat": "law",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.035875968354161215,
+     "lo": 0.011870841027105165,
+     "hi": 0.10561780809241787
+    },
+    {
+     "cat": "psych",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.1572006171193245,
+     "lo": 0.05455466007098723,
+     "hi": 0.4403193808230035
+    },
+    {
+     "cat": "soc",
+     "level": 2.4,
+     "ku": 7096.668207625555,
+     "cov": 0.1182778034604259,
+     "lo": 0.043926552868126224,
+     "hi": 0.325651278656999
+    },
+    {
+     "cat": "hist",
+     "level": 3.0,
+     "ku": 11999.999999999993,
+     "cov": 0.1499999999999999,
+     "lo": 0.058052008197419715,
+     "hi": 0.4017581014843592
+    },
+    {
+     "cat": "phil",
+     "level": 2.2,
+     "ku": 5956.7894908354565,
+     "cov": 0.19855964969451523,
+     "lo": 0.06950570226589128,
+     "hi": 0.5410281177844025
+    },
+    {
+     "cat": "arts",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.07860030855966225,
+     "lo": 0.026000565305349468,
+     "hi": 0.22687824744758892
+    },
+    {
+     "cat": "music",
+     "level": 1.4,
+     "ku": 2427.96687415102,
+     "cov": 0.06937048211860057,
+     "lo": 0.02291274962652243,
+     "hi": 0.21581995189270384
+    },
+    {
+     "cat": "lit",
+     "level": 2.0,
+     "ku": 5000.000000000004,
+     "cov": 0.06250000000000004,
+     "lo": 0.021293614639992926,
+     "hi": 0.16730043608586134
+    },
+    {
+     "cat": "lang",
+     "level": 1.0,
+     "ku": 13500.0,
+     "cov": 0.06136363636363636,
+     "lo": 0.022513689532792747,
+     "hi": 0.17067114551291349
+    },
+    {
+     "cat": "gen",
+     "level": 4.7,
+     "ku": 59607.28861369785,
+     "cov": 0.7450911076712231,
+     "lo": 0.2552664756371453,
+     "hi": 2.0981759565705986
+    }
+   ],
+   "overall": 0.237546624868508,
+   "overallLo": 0.10394453198160568,
+   "overallHi": 0.4225166811662931,
+   "eq": 0.2878489679104672,
+   "unionKU": 223780.79795737797,
+   "hours": 46620.99957445374,
+   "peakCat": "phys",
+   "peakCov": 2.285714285714284,
+   "ratioVsAvg": [
+    2.804611080908038,
+    3.778888760233824,
+    5.007574394722045
+   ]
+  },
+  {
+   "top3": [
+    "gen",
+    "cs",
+    "music"
+   ],
+   "eqLo": 0.13120981513065774,
+   "eqHi": 0.5649661536279278,
+   "id": "jennings",
+   "name": "Ken Jennings",
+   "group": "individual",
+   "role": "Quiz champion, author",
+   "basis": "BA English and computer science, BYU (2000); worked as a software engineer; 74-game Jeopardy! winning streak (2004); won the Greatest of All Time tournament (2020); Jeopardy! host since 2021; trivia and geography books. Grew up partly in South Korea and Singapore.",
+   "langs": [
+    {
+     "name": "English",
+     "prof": 1.0
+    }
+   ],
+   "ling": 1.3,
+   "cells": [
+    {
+     "cat": "math",
+     "level": 2.2,
+     "ku": 5956.7894908354565,
+     "cov": 0.19855964969451523,
+     "lo": 0.07165575673314444,
+     "hi": 0.5378241171797811
+    },
+    {
+     "cat": "phys",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.11228615508523179,
+     "lo": 0.03732314147907056,
+     "hi": 0.32389587243352197
+    },
+    {
+     "cat": "chem",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.11228615508523179,
+     "lo": 0.0380251993107951,
+     "hi": 0.34121976669680376
+    },
+    {
+     "cat": "earth",
+     "level": 2.2,
+     "ku": 5956.7894908354565,
+     "cov": 0.23827157963341827,
+     "lo": 0.08229965863655703,
+     "hi": 0.6731833836883311
+    },
+    {
+     "cat": "bio",
+     "level": 2.0,
+     "ku": 5000.000000000004,
+     "cov": 0.07142857142857148,
+     "lo": 0.02502931662818967,
+     "hi": 0.18685242182601405
+    },
+    {
+     "cat": "med",
+     "level": 1.7,
+     "ku": 3484.226509679745,
+     "cov": 0.049774664423996355,
+     "lo": 0.017527021853848343,
+     "hi": 0.13933375653203103
+    },
+    {
+     "cat": "cs",
+     "level": 3.0,
+     "ku": 11999.999999999993,
+     "cov": 0.2999999999999998,
+     "lo": 0.11290643209130456,
+     "hi": 0.8023925739940732
+    },
+    {
+     "cat": "eng",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.03423265984407291,
+     "lo": 0.011779476472045174,
+     "hi": 0.1004822542504549
+    },
+    {
+     "cat": "econ",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.13100051426610376,
+     "lo": 0.04555863762736036,
+     "hi": 0.37671714843945725
+    },
+    {
+     "cat": "bus",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.09825038569957782,
+     "lo": 0.03448714952912762,
+     "hi": 0.26394577937362546
+    },
+    {
+     "cat": "law",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.04564354645876389,
+     "lo": 0.01537925749756061,
+     "hi": 0.12760471899026812
+    },
+    {
+     "cat": "psych",
+     "level": 1.7,
+     "ku": 3484.226509679745,
+     "cov": 0.1393690603871898,
+     "lo": 0.04971559690362649,
+     "hi": 0.38192533147190794
+    },
+    {
+     "cat": "soc",
+     "level": 2.5,
+     "ku": 7745.966692414834,
+     "cov": 0.12909944487358055,
+     "lo": 0.04852008225310761,
+     "hi": 0.35209860652604086
+    },
+    {
+     "cat": "hist",
+     "level": 3.3,
+     "ku": 15796.58645201085,
+     "cov": 0.19745733065013563,
+     "lo": 0.07457093774110671,
+     "hi": 0.5379938225402614
+    },
+    {
+     "cat": "phil",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.13100051426610376,
+     "lo": 0.04358913357403536,
+     "hi": 0.36825610167464956
+    },
+    {
+     "cat": "arts",
+     "level": 2.6,
+     "ku": 8454.671719825994,
+     "cov": 0.1690934343965199,
+     "lo": 0.06050009612460482,
+     "hi": 0.46761221864545877
+    },
+    {
+     "cat": "music",
+     "level": 2.6,
+     "ku": 8454.671719825994,
+     "cov": 0.24156204913788554,
+     "lo": 0.08701025966513279,
+     "hi": 0.6837167840561182
+    },
+    {
+     "cat": "lit",
+     "level": 3.3,
+     "ku": 15796.58645201085,
+     "cov": 0.19745733065013563,
+     "lo": 0.07407889087660642,
+     "hi": 0.5346694855451993
+    },
+    {
+     "cat": "lang",
+     "level": 1.3,
+     "ku": 14152.558101249673,
+     "cov": 0.06432980955113488,
+     "lo": 0.023893344117020605,
+     "hi": 0.18106878966158615
+    },
+    {
+     "cat": "gen",
+     "level": 6.0,
+     "ku": 179999.99999999997,
+     "cov": 2.2499999999999996,
+     "lo": 0.7369486623657584,
+     "hi": 5.554606901757912
+    }
+   ],
+   "overall": 0.300697271501721,
+   "overallLo": 0.12392729006494299,
+   "overallHi": 0.497218841697764,
+   "eq": 0.24555514277660842,
+   "unionKU": 283271.86461819627,
+   "hours": 59014.97179545755,
+   "peakCat": "gen",
+   "peakCov": 2.2499999999999996,
+   "ratioVsAvg": [
+    3.386146772339991,
+    4.4637531198720275,
+    5.706228749065991
+   ]
+  },
+  {
+   "top3": [
+    "music",
+    "arts",
+    "gen"
+   ],
+   "eqLo": 0.17191010567513773,
+   "eqHi": 0.8461075257224967,
+   "id": "rahman",
+   "name": "A. R. Rahman",
+   "group": "individual",
+   "role": "Composer",
+   "basis": "Left school to work as a musician; diploma in Western classical music on a Trinity College London scholarship; film composer across Tamil, Hindi and international cinema, working in Carnatic, Hindustani, Western classical, Sufi and electronic idioms; two Oscars and two Grammys; founded KM Music Conservatory (2008); directed Le Musk.",
+   "langs": [
+    {
+     "name": "Tamil",
+     "prof": 0.9
+    },
+    {
+     "name": "English (professional)",
+     "prof": 0.6
+    },
+    {
+     "name": "Hindi (working)",
+     "prof": 0.4
+    }
+   ],
+   "ling": 1.0,
+   "cells": [
+    {
+     "cat": "math",
+     "level": 1.2,
+     "ku": 1908.3894548090884,
+     "cov": 0.06361298182696962,
+     "lo": 0.020007215013134502,
+     "hi": 0.18714487615897876
+    },
+    {
+     "cat": "phys",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.06150166003570494,
+     "lo": 0.019787259871504644,
+     "hi": 0.18582839957091832
+    },
+    {
+     "cat": "chem",
+     "level": 0.8,
+     "ku": 1002.4875929374037,
+     "cov": 0.02864250265535439,
+     "lo": 0.007746342877386649,
+     "hi": 0.0976280376684369
+    },
+    {
+     "cat": "earth",
+     "level": 0.9,
+     "ku": 1226.26725855586,
+     "cov": 0.0490506903422344,
+     "lo": 0.013212575452363422,
+     "hi": 0.1531940790310988
+    },
+    {
+     "cat": "bio",
+     "level": 0.9,
+     "ku": 1226.26725855586,
+     "cov": 0.017518103693655144,
+     "lo": 0.0049437056461531246,
+     "hi": 0.05179181417273464
+    },
+    {
+     "cat": "med",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.02142857142857143,
+     "lo": 0.005921714113320616,
+     "hi": 0.058989120735861315
+    },
+    {
+     "cat": "cs",
+     "level": 2.2,
+     "ku": 5956.7894908354565,
+     "cov": 0.1489197372708864,
+     "lo": 0.05497446291450537,
+     "hi": 0.39011869729647447
+    },
+    {
+     "cat": "eng",
+     "level": 2.3,
+     "ku": 6501.7965670366775,
+     "cov": 0.08127245708795847,
+     "lo": 0.029649273180365796,
+     "hi": 0.22233181756112697
+    },
+    {
+     "cat": "econ",
+     "level": 1.2,
+     "ku": 1908.3894548090884,
+     "cov": 0.06361298182696962,
+     "lo": 0.02010543630220066,
+     "hi": 0.18757554012365563
+    },
+    {
+     "cat": "bus",
+     "level": 2.5,
+     "ku": 7745.966692414834,
+     "cov": 0.19364916731037085,
+     "lo": 0.07249986032404768,
+     "hi": 0.5076473029399059
+    },
+    {
+     "cat": "law",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.035875968354161215,
+     "lo": 0.011312457477005133,
+     "hi": 0.10590873360896721
+    },
+    {
+     "cat": "psych",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.10954451150103334,
+     "lo": 0.038111943613818006,
+     "hi": 0.317708323548701
+    },
+    {
+     "cat": "soc",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.04564354645876389,
+     "lo": 0.016025179733933106,
+     "hi": 0.13159212425648878
+    },
+    {
+     "cat": "hist",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.03423265984407291,
+     "lo": 0.011897656247647936,
+     "hi": 0.09626474226192122
+    },
+    {
+     "cat": "phil",
+     "level": 2.4,
+     "ku": 7096.668207625555,
+     "cov": 0.2365556069208518,
+     "lo": 0.08331723708995803,
+     "hi": 0.6522657661849642
+    },
+    {
+     "cat": "arts",
+     "level": 3.6,
+     "ku": 20794.345294654406,
+     "cov": 0.4158869058930881,
+     "lo": 0.1466257115234702,
+     "hi": 1.1708921819599976
+    },
+    {
+     "cat": "music",
+     "level": 6.0,
+     "ku": 179999.99999999997,
+     "cov": 5.142857142857142,
+     "lo": 1.7535421928861428,
+     "hi": 12.520334002616195
+    },
+    {
+     "cat": "lit",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.04912519284978891,
+     "lo": 0.01708258003878034,
+     "hi": 0.1339605719679926
+    },
+    {
+     "cat": "lang",
+     "level": 1.0,
+     "ku": 24300.0,
+     "cov": 0.11045454545454546,
+     "lo": 0.038871037898121054,
+     "hi": 0.3112000935175842
+    },
+    {
+     "cat": "gen",
+     "level": 4.0,
+     "ku": 30000.000000000007,
+     "cov": 0.37500000000000006,
+     "lo": 0.12756135522887252,
+     "hi": 1.1372005720284148
+    }
+   ],
+   "overall": 0.3063845199937742,
+   "overallLo": 0.12665285149554673,
+   "overallHi": 0.5025368572443287,
+   "eq": 0.3642192466806061,
+   "unionKU": 288629.537060135,
+   "hours": 60131.15355419479,
+   "peakCat": "music",
+   "peakCov": 5.142857142857142,
+   "ratioVsAvg": [
+    3.4984995498023648,
+    4.570024631194029,
+    5.814742960499044
+   ]
+  },
+  {
+   "top3": [
+    "hist",
+    "phil",
+    "gen"
+   ],
+   "eqLo": 0.13716149474416656,
+   "eqHi": 0.5616852892667082,
+   "id": "harari",
+   "name": "Yuval Noah Harari",
+   "group": "individual",
+   "role": "Historian",
+   "basis": "DPhil history, Oxford (2002), specialising in medieval and military history; professor at the Hebrew University of Jerusalem; Sapiens, Homo Deus, 21 Lessons and Nexus span world history, biology, economics and AI.",
+   "langs": [
+    {
+     "name": "Hebrew",
+     "prof": 1.0
+    },
+    {
+     "name": "English",
+     "prof": 0.9
+    }
+   ],
+   "ling": 1.0,
+   "cells": [
+    {
+     "cat": "math",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.07175193670832243,
+     "lo": 0.023130649882110374,
+     "hi": 0.20713745765878855
+    },
+    {
+     "cat": "phys",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.06150166003570494,
+     "lo": 0.020138584998624857,
+     "hi": 0.18495767306473587
+    },
+    {
+     "cat": "chem",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.04285714285714286,
+     "lo": 0.011593793781083175,
+     "hi": 0.1291681285753431
+    },
+    {
+     "cat": "earth",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.1572006171193245,
+     "lo": 0.05349903318028806,
+     "hi": 0.449201436415561
+    },
+    {
+     "cat": "bio",
+     "level": 2.5,
+     "ku": 7745.966692414834,
+     "cov": 0.11065666703449764,
+     "lo": 0.041546208093598755,
+     "hi": 0.2942498834604069
+    },
+    {
+     "cat": "med",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.03075083001785247,
+     "lo": 0.00988165473065816,
+     "hi": 0.08919241288277972
+    },
+    {
+     "cat": "cs",
+     "level": 1.9,
+     "ku": 4432.840752826071,
+     "cov": 0.11082101882065178,
+     "lo": 0.03896689254054833,
+     "hi": 0.2933409275319584
+    },
+    {
+     "cat": "eng",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.01875,
+     "lo": 0.0052879520270214435,
+     "hi": 0.05260501426180924
+    },
+    {
+     "cat": "econ",
+     "level": 2.7,
+     "ku": 9228.218597947644,
+     "cov": 0.30760728659825476,
+     "lo": 0.11273176767382159,
+     "hi": 0.8686381895889815
+    },
+    {
+     "cat": "bus",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.05381395253124182,
+     "lo": 0.017241935586648,
+     "hi": 0.15329444915398235
+    },
+    {
+     "cat": "law",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.06550025713305188,
+     "lo": 0.022361051723779897,
+     "hi": 0.1802368915357088
+    },
+    {
+     "cat": "psych",
+     "level": 2.3,
+     "ku": 6501.7965670366775,
+     "cov": 0.2600718626814671,
+     "lo": 0.09360231910582723,
+     "hi": 0.7132532672295928
+    },
+    {
+     "cat": "soc",
+     "level": 3.8,
+     "ku": 24976.596222056207,
+     "cov": 0.4162766037009368,
+     "lo": 0.15597467516002497,
+     "hi": 1.138822865559302
+    },
+    {
+     "cat": "hist",
+     "level": 5.5,
+     "ku": 119999.99999999984,
+     "cov": 1.499999999999998,
+     "lo": 0.5734345461651889,
+     "hi": 3.9287314077253868
+    },
+    {
+     "cat": "phil",
+     "level": 3.5,
+     "ku": 18973.665961010272,
+     "cov": 0.6324555320336757,
+     "lo": 0.2258056233054045,
+     "hi": 1.7935258438933284
+    },
+    {
+     "cat": "arts",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.05477225575051667,
+     "lo": 0.017993803266376954,
+     "hi": 0.16086170025550015
+    },
+    {
+     "cat": "music",
+     "level": 1.1,
+     "ku": 1691.91730950825,
+     "cov": 0.048340494557378565,
+     "lo": 0.01414474564729047,
+     "hi": 0.14482828404052997
+    },
+    {
+     "cat": "lit",
+     "level": 2.3,
+     "ku": 6501.7965670366775,
+     "cov": 0.08127245708795847,
+     "lo": 0.031055414164715238,
+     "hi": 0.21534237862166414
+    },
+    {
+     "cat": "lang",
+     "level": 1.0,
+     "ku": 24300.0,
+     "cov": 0.11045454545454546,
+     "lo": 0.0398708518329377,
+     "hi": 0.3148728311671419
+    },
+    {
+     "cat": "gen",
+     "level": 4.4,
+     "ku": 44412.86069845845,
+     "cov": 0.5551607587307306,
+     "lo": 0.18884337998544676,
+     "hi": 1.6374004801435482
+    }
+   ],
+   "overall": 0.27635199616632755,
+   "overallLo": 0.12298371994734685,
+   "overallHi": 0.4944364498576422,
+   "eq": 0.2345007939426626,
+   "unionKU": 260337.3979884889,
+   "hours": 54236.95791426852,
+   "peakCat": "hist",
+   "peakCov": 1.499999999999998,
+   "ratioVsAvg": [
+    3.28434685964706,
+    4.418577369945706,
+    5.790170436204152
+   ]
+  },
+  {
+   "top3": [
+    "med",
+    "bus",
+    "gen"
+   ],
+   "eqLo": 0.13269957649957675,
+   "eqHi": 0.5614103533210684,
+   "id": "shetty",
+   "name": "Devi Shetty",
+   "group": "individual",
+   "role": "Cardiac surgeon, hospital founder",
+   "basis": "MBBS, Kasturba Medical College (1979); FRCS (England) and cardiothoracic training at Guy's Hospital; 15,000+ heart operations; performed India's first neonatal heart surgery (1992); founded Narayana Hrudayalaya, now Narayana Health (2001); helped design the Yeshasvini low-cost insurance scheme.",
+   "langs": [
+    {
+     "name": "Native language (Kannada region)",
+     "prof": 1.0
+    },
+    {
+     "name": "English",
+     "prof": 1.0
+    },
+    {
+     "name": "Hindi (working, assumed)",
+     "prof": 0.4
+    },
+    {
+     "name": "Bengali (partial, assumed)",
+     "prof": 0.2
+    }
+   ],
+   "ling": 0.8,
+   "cells": [
+    {
+     "cat": "math",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.09128709291752778,
+     "lo": 0.030226330345610945,
+     "hi": 0.26455554201175324
+    },
+    {
+     "cat": "phys",
+     "level": 1.6,
+     "ku": 3089.004252837061,
+     "cov": 0.08825726436677317,
+     "lo": 0.028688716145611637,
+     "hi": 0.26340868514283117
+    },
+    {
+     "cat": "chem",
+     "level": 2.2,
+     "ku": 5956.7894908354565,
+     "cov": 0.1701939854524416,
+     "lo": 0.05838167068335382,
+     "hi": 0.4989534967318283
+    },
+    {
+     "cat": "earth",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.06,
+     "lo": 0.015883080036003302,
+     "hi": 0.17782168521390038
+    },
+    {
+     "cat": "bio",
+     "level": 3.0,
+     "ku": 11999.999999999993,
+     "cov": 0.17142857142857132,
+     "lo": 0.06567851381294047,
+     "hi": 0.4568249287029193
+    },
+    {
+     "cat": "med",
+     "level": 5.4,
+     "ku": 110652.94937780732,
+     "cov": 1.5807564196829618,
+     "lo": 0.594417187688124,
+     "hi": 4.159077714228525
+    },
+    {
+     "cat": "cs",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.06846531968814581,
+     "lo": 0.023017648805108044,
+     "hi": 0.19497897425075708
+    },
+    {
+     "cat": "eng",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.04912519284978891,
+     "lo": 0.017165540314969967,
+     "hi": 0.13437925071371126
+    },
+    {
+     "cat": "econ",
+     "level": 2.2,
+     "ku": 5956.7894908354565,
+     "cov": 0.19855964969451523,
+     "lo": 0.07197859508802183,
+     "hi": 0.5505885640265205
+    },
+    {
+     "cat": "bus",
+     "level": 4.3,
+     "ku": 40263.53246083525,
+     "cov": 1.0065883115208814,
+     "lo": 0.36815757658407433,
+     "hi": 2.7039120495854587
+    },
+    {
+     "cat": "law",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.06550025713305188,
+     "lo": 0.023015069364523542,
+     "hi": 0.18543083224650328
+    },
+    {
+     "cat": "psych",
+     "level": 2.0,
+     "ku": 5000.000000000004,
+     "cov": 0.20000000000000012,
+     "lo": 0.06984675868570063,
+     "hi": 0.5338577718211138
+    },
+    {
+     "cat": "soc",
+     "level": 2.2,
+     "ku": 5956.7894908354565,
+     "cov": 0.09927982484725761,
+     "lo": 0.03619976663483002,
+     "hi": 0.270085321210259
+    },
+    {
+     "cat": "hist",
+     "level": 1.5,
+     "ku": 2738.612787525833,
+     "cov": 0.03423265984407291,
+     "lo": 0.012125967446996112,
+     "hi": 0.09616109025122481
+    },
+    {
+     "cat": "phil",
+     "level": 1.6,
+     "ku": 3089.004252837061,
+     "cov": 0.10296680842790203,
+     "lo": 0.03405555171352511,
+     "hi": 0.30447992721438166
+    },
+    {
+     "cat": "arts",
+     "level": 1.1,
+     "ku": 1691.91730950825,
+     "cov": 0.033838346190165,
+     "lo": 0.009782485830237823,
+     "hi": 0.0987213201935622
+    },
+    {
+     "cat": "music",
+     "level": 1.1,
+     "ku": 1691.91730950825,
+     "cov": 0.048340494557378565,
+     "lo": 0.014023718863566997,
+     "hi": 0.14629198117178135
+    },
+    {
+     "cat": "lit",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.02690697626562091,
+     "lo": 0.008742277975415842,
+     "hi": 0.07797975872111355
+    },
+    {
+     "cat": "lang",
+     "level": 0.8,
+     "ku": 32202.487592937403,
+     "cov": 0.14637494360426093,
+     "lo": 0.051744101026326005,
+     "hi": 0.4110134848000677
+    },
+    {
+     "cat": "gen",
+     "level": 4.2,
+     "ku": 36501.860513592335,
+     "cov": 0.4562732564199041,
+     "lo": 0.15693750221433025,
+     "hi": 1.3076794819197264
+    }
+   ],
+   "overall": 0.2717322853576276,
+   "overallLo": 0.12075331619941833,
+   "overallHi": 0.4920572874733996,
+   "eq": 0.23491876874456108,
+   "unionKU": 255985.39942115312,
+   "hours": 53330.291546073575,
+   "peakCat": "med",
+   "peakCov": 1.5807564196829618,
+   "ratioVsAvg": [
+    3.252393857922492,
+    4.38552396514496,
+    5.7358428101350505
+   ]
+  },
+  {
+   "top3": [
+    "lit",
+    "gen",
+    "hist"
+   ],
+   "eqLo": 0.15078964642970236,
+   "eqHi": 0.6191032589422526,
+   "id": "ghosh",
+   "name": "Amitav Ghosh",
+   "group": "individual",
+   "role": "Novelist, essayist",
+   "basis": "BA history and MA sociology, University of Delhi; DPhil social anthropology, Oxford (1982), with fieldwork in an Egyptian village; novels including the Ibis trilogy; nonfiction on climate change and colonial history; Jnanpith Award (2018).",
+   "langs": [
+    {
+     "name": "Bengali",
+     "prof": 1.0
+    },
+    {
+     "name": "English",
+     "prof": 1.0
+    },
+    {
+     "name": "Hindi",
+     "prof": 0.5
+    },
+    {
+     "name": "Egyptian Arabic (fieldwork, assumed working)",
+     "prof": 0.4
+    }
+   ],
+   "ling": 1.8,
+   "cells": [
+    {
+     "cat": "math",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.07175193670832243,
+     "lo": 0.023005601393422014,
+     "hi": 0.21165848670252008
+    },
+    {
+     "cat": "phys",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.06150166003570494,
+     "lo": 0.01906884419991712,
+     "hi": 0.1877356993895585
+    },
+    {
+     "cat": "chem",
+     "level": 1.1,
+     "ku": 1691.91730950825,
+     "cov": 0.048340494557378565,
+     "lo": 0.013303629630387786,
+     "hi": 0.1493632811075341
+    },
+    {
+     "cat": "earth",
+     "level": 2.8,
+     "ku": 10072.539929824636,
+     "cov": 0.40290159719298546,
+     "lo": 0.14792710030852824,
+     "hi": 1.1417041370951446
+    },
+    {
+     "cat": "bio",
+     "level": 2.0,
+     "ku": 5000.000000000004,
+     "cov": 0.07142857142857148,
+     "lo": 0.025195842177112994,
+     "hi": 0.18597319433856843
+    },
+    {
+     "cat": "med",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.03075083001785247,
+     "lo": 0.009679992719446643,
+     "hi": 0.0908962646361057
+    },
+    {
+     "cat": "cs",
+     "level": 1.0,
+     "ku": 1500.0,
+     "cov": 0.0375,
+     "lo": 0.010472092225670254,
+     "hi": 0.10648509676394442
+    },
+    {
+     "cat": "eng",
+     "level": 1.1,
+     "ku": 1691.91730950825,
+     "cov": 0.021148966368853127,
+     "lo": 0.0061100641571094965,
+     "hi": 0.059979415095376985
+    },
+    {
+     "cat": "econ",
+     "level": 2.3,
+     "ku": 6501.7965670366775,
+     "cov": 0.2167265522345559,
+     "lo": 0.08025177301298049,
+     "hi": 0.6037412951614967
+    },
+    {
+     "cat": "bus",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.05381395253124182,
+     "lo": 0.017402387912068076,
+     "hi": 0.14864422993397663
+    },
+    {
+     "cat": "law",
+     "level": 1.3,
+     "ku": 2152.5581012496727,
+     "cov": 0.035875968354161215,
+     "lo": 0.012117524968799358,
+     "hi": 0.10323750667245303
+    },
+    {
+     "cat": "psych",
+     "level": 1.6,
+     "ku": 3089.004252837061,
+     "cov": 0.12356017011348243,
+     "lo": 0.04284311244825554,
+     "hi": 0.35430599778676797
+    },
+    {
+     "cat": "soc",
+     "level": 4.2,
+     "ku": 36501.860513592335,
+     "cov": 0.6083643418932057,
+     "lo": 0.22759113076612922,
+     "hi": 1.7029521019256841
+    },
+    {
+     "cat": "hist",
+     "level": 4.5,
+     "ku": 48989.79485566351,
+     "cov": 0.6123724356957938,
+     "lo": 0.22798564214523684,
+     "hi": 1.6949414961108367
+    },
+    {
+     "cat": "phil",
+     "level": 2.3,
+     "ku": 6501.7965670366775,
+     "cov": 0.2167265522345559,
+     "lo": 0.07799390348662401,
+     "hi": 0.5946833114468726
+    },
+    {
+     "cat": "arts",
+     "level": 1.8,
+     "ku": 3930.0154279831127,
+     "cov": 0.07860030855966225,
+     "lo": 0.025744714187816813,
+     "hi": 0.2220704245429931
+    },
+    {
+     "cat": "music",
+     "level": 1.2,
+     "ku": 1908.3894548090884,
+     "cov": 0.05452541299454538,
+     "lo": 0.016796943562127204,
+     "hi": 0.16552638813617118
+    },
+    {
+     "cat": "lit",
+     "level": 5.6,
+     "ku": 130136.61254372374,
+     "cov": 1.6267076567965468,
+     "lo": 0.619005330269257,
+     "hi": 4.192219387849968
+    },
+    {
+     "cat": "lang",
+     "level": 1.8,
+     "ku": 38730.01542798311,
+     "cov": 0.1760455246726505,
+     "lo": 0.06404596323594247,
+     "hi": 0.4907825281015268
+    },
+    {
+     "cat": "gen",
+     "level": 4.6,
+     "ku": 54038.40154082447,
+     "cov": 0.6754800192603059,
+     "lo": 0.232554067367453,
+     "hi": 2.00838101565433
+    }
+   ],
+   "overall": 0.344947104540034,
+   "overallLo": 0.15421896399365884,
+   "overallHi": 0.6168009267326913,
+   "eq": 0.2612061475825188,
+   "unionKU": 324957.41983193904,
+   "hours": 67699.4624649873,
+   "peakCat": "lit",
+   "peakCov": 1.6267076567965468,
+   "ratioVsAvg": [
+    4.166305939340424,
+    5.532447804111701,
+    7.211000398872123
+   ]
+  }
+ ]
+}
